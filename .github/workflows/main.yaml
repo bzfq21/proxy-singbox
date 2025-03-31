@@ -1,0 +1,22 @@
+name: Fetch from server
+on:
+  schedule:
+    - cron: "0,15,30,45 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Config Github
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+      - name: Just Do It
+        env:
+          PROXIES_URL: ${{ secrets.PROXIES_URL }}
+        run: |
+          curl $PROXIES_URL > proxies.yaml && git add . && git commit -m 'Update: '"$(date)" && git push || echo 'nothing to push'
