@@ -111,6 +111,9 @@ function applyBaseOptimizations(cfg) {
   if (cfg.dns?.servers && !cfg.dns.servers.some(s => s.tag === 'local-alt')) {
     cfg.dns.servers.push({ tag: 'local-alt', type: 'udp', server: '114.114.114.114' });
   }
+  if (cfg.dns && !cfg.dns.strategy) {
+    cfg.dns.strategy = 'prefer_ipv4';
+  }
   if (!cfg.ntp) {
     cfg.ntp = { enabled: true, server: 'time.cloudflare.com' };
   }
@@ -119,6 +122,11 @@ function applyBaseOptimizations(cfg) {
   }
   if (!cfg.platform) {
     cfg.platform = { http_proxy: { enabled: false } };
+  }
+  for (const ob of cfg.outbounds) {
+    if (['trojan', 'shadowsocks'].includes(ob.type) && ob.tcp_fast_open === undefined) {
+      ob.tcp_fast_open = true;
+    }
   }
 }
 applyBaseOptimizations(config);
