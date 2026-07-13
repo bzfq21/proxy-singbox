@@ -108,6 +108,18 @@ function applyBaseOptimizations(cfg) {
   if (tunIn && !tunIn.stack) {
     tunIn.stack = 'system';
   }
+  if (cfg.dns?.servers && !cfg.dns.servers.some(s => s.tag === 'local-alt')) {
+    cfg.dns.servers.push({ tag: 'local-alt', type: 'udp', server: '114.114.114.114' });
+  }
+  if (!cfg.ntp) {
+    cfg.ntp = { enabled: true, server: 'time.cloudflare.com' };
+  }
+  if (cfg.route && cfg.route.sniff_override_destination === undefined) {
+    cfg.route.sniff_override_destination = true;
+  }
+  if (!cfg.platform) {
+    cfg.platform = { http_proxy: { enabled: false } };
+  }
 }
 applyBaseOptimizations(config);
 
@@ -165,6 +177,7 @@ const pro = JSON.parse(JSON.stringify(geo));
 pro.dns.fakeip = { enabled: true, inet4_range: '198.18.0.0/15', inet6_range: 'fc00::/18' };
 pro.dns.servers = [
   { tag: 'local', type: 'udp', server: '223.5.5.5' },
+  { tag: 'local-alt', type: 'udp', server: '114.114.114.114' },
   { tag: 'block-dns', type: 'block', server: 'rcode://success' },
   { tag: 'fakeip', type: 'fakeip', resolver: 'local' },
 ];

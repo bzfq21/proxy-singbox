@@ -15,6 +15,11 @@
         "type": "tls",
         "server": "8.8.8.8",
         "detour": "🚀 节点"
+      },
+      {
+        "tag": "local-alt",
+        "type": "udp",
+        "server": "114.114.114.114"
       }
     ],
     "rules": [
@@ -463,11 +468,21 @@
     ],
     "auto_detect_interface": true,
     "default_domain_resolver": "local",
-    "final": "🚀 节点"
+    "final": "🚀 节点",
+    "sniff_override_destination": true
   },
   "cache_file": {
     "enabled": true,
     "path": "cache.db",
     "cache_id": "singbox"
+  },
+  "ntp": {
+    "enabled": true,
+    "server": "time.cloudflare.com"
+  },
+  "platform": {
+    "http_proxy": {
+      "enabled": false
+    }
   }
 }
