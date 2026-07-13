@@ -39,7 +39,6 @@ for f in "${CONFIGS[@]}"; do
       ['dns.rules',             !!c.dns?.rules],
       ['outbounds',             !!c.outbounds],
       ['inbounds[0].type',      c.inbounds?.[0]?.type === 'tun'],
-      ['cache_file.cache_id',   !!c.cache_file?.cache_id],
       ['ntp.enabled',           c.ntp?.enabled === true],
       ['log.level',             c.log?.level === 'warn'],
     ];
@@ -50,7 +49,7 @@ for f in "${CONFIGS[@]}"; do
     }
   " && ok "$f: all required fields present" || fail "$f: missing fields: $(node -e "try {
     const c = JSON.parse(require('fs').readFileSync('$f','utf8'));
-    const checks = [['route.rules',!!c.route?.rules],['route.rule_set',!!c.route?.rule_set],['dns.servers',!!c.dns?.servers],['dns.rules',!!c.dns?.rules],['outbounds',!!c.outbounds],['inbounds[0].type',c.inbounds?.[0]?.type==='tun'],['cache_file.cache_id',!!c.cache_file?.cache_id],['ntp.enabled',c.ntp?.enabled===true],['log.level',c.log?.level==='warn']];const failed=checks.filter(([k,v])=>!v).map(([k])=>k);console.log(failed.join(', '))
+    const checks = [['route.rules',!!c.route?.rules],['route.rule_set',!!c.route?.rule_set],['dns.servers',!!c.dns?.servers],['dns.rules',!!c.dns?.rules],['outbounds',!!c.outbounds],['inbounds[0].type',c.inbounds?.[0]?.type==='tun'],['ntp.enabled',c.ntp?.enabled===true],['log.level',c.log?.level==='warn']];const failed=checks.filter(([k,v])=>!v).map(([k])=>k);console.log(failed.join(', '))
   } catch(e) { console.log('parse error') }")"
 done
 

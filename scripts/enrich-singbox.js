@@ -75,8 +75,7 @@ function findRuleIndex(cfg, matchTags) {
 }
 
 function setCacheId(cfg, id) {
-  if (!cfg.cache_file) cfg.cache_file = { enabled: true, path: 'cache.db' };
-  cfg.cache_file.cache_id = id;
+  if (cfg.cache_file) cfg.cache_file.cache_id = id;
 }
 
 function writeVariant(cfg, name) {
@@ -119,9 +118,6 @@ const MEDIA_ROUTE_RULES = [
 ];
 
 function applyBaseOptimizations(cfg) {
-  if (!cfg.cache_file) {
-    cfg.cache_file = { enabled: true, path: 'cache.db' };
-  }
   const tunIn = cfg.inbounds?.find(i => i.type === 'tun');
   if (tunIn && !tunIn.stack) {
     tunIn.stack = 'system';
