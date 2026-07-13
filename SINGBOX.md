@@ -9,10 +9,32 @@
 
 ```bash
 npm install -g @0xsnx/subbridge
-subbridge build -i proxies.yaml -o singbox-config.json
+subbridge build -i proxies.yaml -i extra.yaml -o singbox-config.json
 ```
 
-> 注：SubBridge 0.3.0 默认模板会写入 `independent_cache`（sing-box 1.14.0 已废弃），本仓库的后处理脚本 `scripts/enrich-singbox.js` 自动删除该字段。
+> 注：SubBridge 0.3.0 默认模板会写入 `independent_cache`（sing-box 1.14.0 已废弃），本仓库的后处理脚本 `scripts/enrich-singbox.js` 自动删除它并应用多项优化。
+
+## 自动构建
+
+本仓库通过 **GitHub Actions**（`.github/workflows/main.yaml`）每 30 分钟自动执行一次完整构建链：
+
+```
+curl 上游 PuddinCat proxies.yaml  ─┐
+                                   ├→ subbridge build → node enrich-singbox.js → git commit+push
+curl 免费池 Ruk1ng001/freeSub ────┘
+```
+
+构建失败时（如免费源宕机）自动降级为仅用上游源构建，不影响配置产出。
+
+## 节点来源
+
+| 源 | 协议 | 节点数 | 更新频率 |
+| --- | --- | --- | --- |
+| [PuddinCat/BestClash](https://github.com/PuddinCat/BestClash) | trojan / hysteria2 / shadowsocks | 16 | 30 分钟 |
+| [Ruk1ng001/freeSub](https://github.com/Ruk1ng001/freeSub) | vless / vmess / trojan / socks / hysteria2 / shadowsocks | ~109 | 每日 |
+| **合计** | | **≈125** | **30 分钟自动构建** |
+
+合并后任意版本均可分配到所有节点。
 
 ## 四个配置版本
 
@@ -25,7 +47,7 @@ subbridge build -i proxies.yaml -o singbox-config.json
 | `singbox-config-geo.json` | 地区分流版 | 增强版 + 按服务流媒体路由（见下） |
 | `singbox-config-geo-pro.json` | 职业版 | 地区分流版 + FakeIP + Clash API + strict_route (见下) |
 
-四版均包含全部 16 个节点（trojan / hysteria2 / shadowsocks）+ 国家分组（🇺🇸🇩🇪🇬🇧🇫🇷🇳🇱🇷🇺🇮🇳 的 selector / urltest）、tun 入站、DNS 与基础路由。此外通过后处理脚本自动应用了多项优化：`cache_file` 持久化节点选择、TUN `stack: system`、DNS `prefer_ipv4` 与备选 DNS、NTP 时间同步、`sniff_override_destination`、trojan 节点 TLS UTLS Chrome 指纹、hysteria2 `tls.enabled`、`tcp_fast_open` 等。
+四版均包含约 **125 个节点**（上游 16 + 免费池 109，协议覆盖 trojan / vless / vmess / hysteria2 / shadowsocks / socks），按国家分组（🇺🇸🇩🇪🇬🇧🇫🇷🇳🇱🇷🇺🇮🇳 的 selector / urltest）、tun 入站、DNS 与基础路由。此外通过后处理脚本自动应用了多项优化：`cache_file` 持久化节点选择、TUN `stack: system`、DNS `prefer_ipv4` 与备选 DNS、NTP 时间同步、`sniff_override_destination`、trojan 节点 TLS UTLS Chrome 指纹、hysteria2 `tls.enabled`、`tcp_fast_open` 等。
 
 ### 地区分流版路由逻辑
 
@@ -92,6 +114,11 @@ sing-box run
 
 - **MetaCubeX/meta-rules-dat**：`geosite-cn` / `geoip-cn` / `geosite-ads`，及按服务命名的 `netflix` / `disney` / `primevideo` / `hulu` / `hbo` / `spotify` / `bbc` / `bilibili` 等 `.srs`。
 - **Repcz/Tool**：`ChinaDomain`（国内域名白名单）、`ChinaIP`（国内 IP）、`Ads_EasyListChina`（国内广告）。
+- **Ruk1ng001/freeSub**：额外免费节点池（vless / vmess / trojan / socks / hysteria2 / ss），与上游合并后约 125 节点。
+
+## 注意事项
+
+- 免费节点来自公共订阅池，**稳定性与速度不保证**，建议配合 `urltest`（自动测速）使用。
 
 ## 关于仓库地址
 
