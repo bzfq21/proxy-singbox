@@ -38,7 +38,6 @@
       }
     ],
     "final": "fakeip",
-    "independent_cache": true,
     "fakeip": {
       "enabled": true,
       "inet4_range": "198.18.0.0/15",
@@ -53,7 +52,8 @@
         "172.19.0.1/30",
         "fdfe:dcba:9876::1/126"
       ],
-      "auto_route": true
+      "auto_route": true,
+      "stack": "system"
     }
   ],
   "outbounds": [
@@ -594,6 +594,11 @@
     "default_domain_resolver": "local",
     "final": "🚀 节点",
     "strict_route": true
+  },
+  "cache_file": {
+    "enabled": true,
+    "path": "cache.db",
+    "cache_id": "singbox"
   },
   "experimental": {
     "clash_api": {

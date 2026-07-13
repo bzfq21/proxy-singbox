@@ -7,8 +7,8 @@ const OUT_DIR = process.argv[3] || '.';
 const config = JSON.parse(fs.readFileSync(INPUT, 'utf8'));
 
 // Clean up deprecated fields
-if (config.independent_cache !== undefined) {
-  delete config.independent_cache;
+if (config.dns?.independent_cache !== undefined) {
+  delete config.dns.independent_cache;
 }
 
 // Fix hysteria2 outbounds: tls.enabled required in sing-box 1.12+
@@ -100,8 +100,18 @@ const MEDIA_ROUTE_RULES = [
   { rule_set: ['bilibili'], outbound: 'direct' },
 ];
 
-// ---- Write base (cleaned) ----
+function applyBaseOptimizations(cfg) {
+  if (!cfg.cache_file) {
+    cfg.cache_file = { enabled: true, path: 'cache.db', cache_id: 'singbox' };
+  }
+  const tunIn = cfg.inbounds?.find(i => i.type === 'tun');
+  if (tunIn && !tunIn.stack) {
+    tunIn.stack = 'system';
+  }
+}
+applyBaseOptimizations(config);
 
+// ---- Write base (cleaned) ----
 fs.writeFileSync(path.join(OUT_DIR, 'singbox-config.json'), JSON.stringify(config, null, 2));
 console.log('✅ base: singbox-config.json');
 

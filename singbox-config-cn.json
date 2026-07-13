@@ -25,8 +25,7 @@
         "server": "local"
       }
     ],
-    "final": "remote",
-    "independent_cache": true
+    "final": "remote"
   },
   "inbounds": [
     {
@@ -36,7 +35,8 @@
         "172.19.0.1/30",
         "fdfe:dcba:9876::1/126"
       ],
-      "auto_route": true
+      "auto_route": true,
+      "stack": "system"
     }
   ],
   "outbounds": [
@@ -464,5 +464,10 @@
     "auto_detect_interface": true,
     "default_domain_resolver": "local",
     "final": "🚀 节点"
+  },
+  "cache_file": {
+    "enabled": true,
+    "path": "cache.db",
+    "cache_id": "singbox"
   }
 }
