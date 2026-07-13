@@ -1,58 +1,49 @@
-# 🚀BestClash
+# BestClash — sing-box 配置聚合
 
-🐱免费Clash代理！自动从网上爬取最快的代理，每30分钟更新！
+将 [PuddinCat/BestClash](https://github.com/PuddinCat/BestClash) 的 Clash 订阅与免费节点池融合，自动构建 **sing-box 1.12+** 配置。
 
-# 订阅地址
+每 30 分钟自动更新：抓取上游 `proxies.yaml` + 免费节点池 → SubBridge 转换 → 优化注入 → 推送。
 
-github
+## 订阅地址
 
-```text
-https://raw.githubusercontent.com/PuddinCat/BestClash/refs/heads/main/proxies.yaml
-```
+四版配置，按需选用其一：
 
-国内镜像，来自项目[CF-Workers-GitHub-Proxy](https://github.com/Geekertao/CF-Workers-GitHub-Proxy)
+| 版本 | 地址 | 说明 |
+|------|------|------|
+| 基础版 | `https://raw.githubusercontent.com/bzfq21/BestClash/refs/heads/main/singbox-config.json` | MetaCubeX 国内分流 + 广告拦截 |
+| 国内增强版 | `https://raw.githubusercontent.com/bzfq21/BestClash/refs/heads/main/singbox-config-cn.json` | 基础版 + Repcz 国内规则集 |
+| 地区分流版 | `https://raw.githubusercontent.com/bzfq21/BestClash/refs/heads/main/singbox-config-geo.json` | 增强版 + 流媒体按版权地区路由 |
+| 职业版 | `https://raw.githubusercontent.com/bzfq21/BestClash/refs/heads/main/singbox-config-geo-pro.json` | 地区分流版 + FakeIP + Clash API |
 
-```text
-https://ghfile.geekertao.top/https://github.com/PuddinCat/BestClash/blob/main/proxies.yaml
-```
+详细的版本差异与使用方法见 [SINGBOX.md](SINGBOX.md)。
 
-# 使用方法（安卓）
+## 节点来源
 
-下载安装[clash meta for android](https://github.com/MetaCubeX/ClashMetaForAndroid/releases)
+| 源 | 协议 | 节点数 |
+|----|------|--------|
+| [PuddinCat/BestClash](https://github.com/PuddinCat/BestClash) | trojan / hysteria2 / shadowsocks | ~16 |
+| [Ruk1ng001/freeSub](https://github.com/Ruk1ng001/freeSub) | vless / vmess / trojan / ss / socks / hysteria2 | ~109 |
+| **合计** | | **~125** |
 
-如果下不动可以点[这里](https://ghfile.geekertao.top/https://github.com/MetaCubeX/ClashMetaForAndroid/releases/download/v2.11.7/cmfa-2.11.7-meta-universal-release.apk)从国内服务器下载...
+## 特性
 
-然后在配置里填入上面的地址就行了
+- ✅ 全自动构建（SubBridge + 后处理脚本）
+- ✅ 节点 TLS 优化（UTLS Chrome 指纹、hysteria2 tls.enabled）
+- ✅ 国内直连 + 广告拦截（MetaCubeX / Repcz 规则集，CDN 加速拉取）
+- ✅ 流媒体版权地区路由（Netflix / Disney / BBC / Bilibili 等）
+- ✅ DNS 优选（prefer_ipv4 + 备选 DNS + NTP 时间同步）
+- ✅ cache_file 持久化（节点选择、FakeIP 映射重启不丢）
+- ✅ tcp_fast_open 加速 TCP 握手
 
-[![Star History Chart](./stars.svg)](https://www.star-history.com/#PuddinCat/BestClash&Date)
+## 用量（sing-box GUI 客户端）
 
-# 鸣谢
+将上述订阅地址填入 sing-box 客户端（NekoBox / sing-box for Android / SFI / Stash 等）即可。
 
-感谢国内镜像及以下所有代理来源
+## 鸣谢
 
-```
-https://cdn.jsdelivr.net/gh/vxiaov/free_proxies@main/clash/clash.provider.yaml
-https://freenode.openrunner.net/uploads/20240807-clash.yaml
-https://raw.githubusercontent.com/Misaka-blog/chromego_merge/main/sub/merged_proxies_new.yaml
-https://raw.githubusercontent.com/MrMohebi/xray-proxy-grabber-telegram/master/collected-proxies/clash-meta/all.yaml
-https://raw.githubusercontent.com/NiceVPN123/NiceVPN/main/Clash.yaml
-https://raw.githubusercontent.com/aiboboxx/clashfree/main/clash.yml
-https://raw.githubusercontent.com/anaer/Sub/main/clash.yaml
-https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/list.yml
-https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/clash.yml
-https://raw.githubusercontent.com/ermaozi01/free_clash_vpn/main/subscribe/clash.yml
-https://raw.githubusercontent.com/lagzian/SS-Collector/main/mix_clash.yaml
-https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eternity.yml
-https://raw.githubusercontent.com/mfuu/v2ray/master/clash.yaml
-https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.yml
-https://raw.githubusercontent.com/ronghuaxueleng/get_v2/main/pub/combine.yaml
-https://raw.githubusercontent.com/ts-sf/fly/main/clash
-https://raw.githubusercontent.com/yaney01/Yaney01/main/temporary
-https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/base64/mix
-https://raw.githubusercontent.com/zhangkaiitugithub/passcro/main/speednodes.yaml
-https://tt.vg/freeclash
-```
-
-# 其他客户端（sing-box）
-
-`proxies.yaml` 是 Clash 格式，sing-box 内核不原生支持，需先转换。仓库已提供三个转换好的 sing-box 1.12+ 配置（`singbox-config.json` / `singbox-config-cn.json` / `singbox-config-geo.json`），详见 [SINGBOX.md](./SINGBOX.md)。
+- [PuddinCat/BestClash](https://github.com/PuddinCat/BestClash) — 上游 Clash 订阅源
+- [Ruk1ng001/freeSub](https://github.com/Ruk1ng001/freeSub) — 免费节点池
+- [zzf2333/SubBridge](https://github.com/zzf2333/SubBridge) — Clash → sing-box 转换工具
+- [MetaCubeX/meta-rules-dat](https://github.com/MetaCubeX/meta-rules-dat) — 通用规则集
+- [Repcz/Tool](https://github.com/Repcz/Tool) — 国内增强规则集
+- [jsdelivr](https://www.jsdelivr.com/) — 规则集 CDN 加速
