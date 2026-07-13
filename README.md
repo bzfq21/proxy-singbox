@@ -8,12 +8,12 @@
 
 四版配置，按需选用其一：
 
-| 版本 | 地址 | 说明 |
-|------|------|------|
-| 基础版 | `https://raw.githubusercontent.com/bzfq21/BestClash/refs/heads/main/singbox-config.json` | MetaCubeX 国内分流 + 广告拦截 |
-| 国内增强版 | `https://raw.githubusercontent.com/bzfq21/BestClash/refs/heads/main/singbox-config-cn.json` | 基础版 + Repcz 国内规则集 |
-| 地区分流版 | `https://raw.githubusercontent.com/bzfq21/BestClash/refs/heads/main/singbox-config-geo.json` | 增强版 + 流媒体按版权地区路由 |
-| 职业版 | `https://raw.githubusercontent.com/bzfq21/BestClash/refs/heads/main/singbox-config-geo-pro.json` | 地区分流版 + FakeIP + Clash API |
+| 版本 | 说明 | 国内镜像（jsdelivr CDN） | 国际直连 |
+|------|------|---------------------------|-----------|
+| 基础版 | MetaCubeX 国内分流 + 广告拦截 | `https://testingcf.jsdelivr.net/gh/bzfq21/BestClash@main/singbox-config.json` | `https://raw.githubusercontent.com/bzfq21/BestClash/refs/heads/main/singbox-config.json` |
+| 国内增强版 | 基础版 + Repcz 国内规则集 | `https://testingcf.jsdelivr.net/gh/bzfq21/BestClash@main/singbox-config-cn.json` | `https://raw.githubusercontent.com/bzfq21/BestClash/refs/heads/main/singbox-config-cn.json` |
+| 地区分流版 | 增强版 + 流媒体版权地区路由 | `https://testingcf.jsdelivr.net/gh/bzfq21/BestClash@main/singbox-config-geo.json` | `https://raw.githubusercontent.com/bzfq21/BestClash/refs/heads/main/singbox-config-geo.json` |
+| 职业版 | 地区分流版 + FakeIP + Clash API | `https://testingcf.jsdelivr.net/gh/bzfq21/BestClash@main/singbox-config-geo-pro.json` | `https://raw.githubusercontent.com/bzfq21/BestClash/refs/heads/main/singbox-config-geo-pro.json` |
 
 ### 版本差异
 
@@ -49,8 +49,8 @@ sing-box run
 
 ### 注意事项
 
+- 国内用户请使用「国内镜像（jsdelivr CDN）」列地址；`raw.githubusercontent.com` 在国内通常不可达。
 - 免费节点来自公共订阅池，**稳定性不保证**，建议配合 `urltest` 自动测速使用。
-- 四版 `route.rule_set` 的 `.srs` 规则集从 **jsdelivr CDN** 拉取（`download_detour: "direct"`），客户端需能访问 CDN。
 - 若不需要免费池，可自行 `fork` 后删除 workflow 中的 `Fetch extra free node sources` 步骤。
 
 ### 自动构建
