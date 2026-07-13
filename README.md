@@ -1,4 +1,4 @@
-# BestClash — sing-box 配置聚合
+# proxy-singbox — sing-box 配置聚合
 
 将 [PuddinCat/BestClash](https://github.com/PuddinCat/BestClash) 的 Clash 订阅与免费节点池融合，自动构建 **sing-box 1.12+** 配置。
 
@@ -10,10 +10,10 @@
 
 | 版本 | 说明 | 国内镜像（jsdelivr CDN） | 国际直连 |
 |------|------|---------------------------|-----------|
-| 基础版 | MetaCubeX 国内分流 + 广告拦截 | `https://testingcf.jsdelivr.net/gh/bzfq21/BestClash@main/singbox-config.json` | `https://raw.githubusercontent.com/bzfq21/BestClash/refs/heads/main/singbox-config.json` |
-| 国内增强版 | 基础版 + Repcz 国内规则集 | `https://testingcf.jsdelivr.net/gh/bzfq21/BestClash@main/singbox-config-cn.json` | `https://raw.githubusercontent.com/bzfq21/BestClash/refs/heads/main/singbox-config-cn.json` |
-| 地区分流版 | 增强版 + 流媒体版权地区路由 | `https://testingcf.jsdelivr.net/gh/bzfq21/BestClash@main/singbox-config-geo.json` | `https://raw.githubusercontent.com/bzfq21/BestClash/refs/heads/main/singbox-config-geo.json` |
-| 职业版 | 地区分流版 + FakeIP + Clash API | `https://testingcf.jsdelivr.net/gh/bzfq21/BestClash@main/singbox-config-geo-pro.json` | `https://raw.githubusercontent.com/bzfq21/BestClash/refs/heads/main/singbox-config-geo-pro.json` |
+| 基础版 | MetaCubeX 国内分流 + 广告拦截 | `https://testingcf.jsdelivr.net/gh/bzfq21/proxy-singbox@main/singbox-config.json` | `https://raw.githubusercontent.com/bzfq21/proxy-singbox/refs/heads/main/singbox-config.json` |
+| 国内增强版 | 基础版 + Repcz 国内规则集 | `https://testingcf.jsdelivr.net/gh/bzfq21/proxy-singbox@main/singbox-config-cn.json` | `https://raw.githubusercontent.com/bzfq21/proxy-singbox/refs/heads/main/singbox-config-cn.json` |
+| 地区分流版 | 增强版 + 流媒体版权地区路由 | `https://testingcf.jsdelivr.net/gh/bzfq21/proxy-singbox@main/singbox-config-geo.json` | `https://raw.githubusercontent.com/bzfq21/proxy-singbox/refs/heads/main/singbox-config-geo.json` |
+| 职业版 | 地区分流版 + FakeIP + Clash API | `https://testingcf.jsdelivr.net/gh/bzfq21/proxy-singbox@main/singbox-config-geo-pro.json` | `https://raw.githubusercontent.com/bzfq21/proxy-singbox/refs/heads/main/singbox-config-geo-pro.json` |
 
 ### 版本差异
 
