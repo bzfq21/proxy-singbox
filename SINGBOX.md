@@ -12,19 +12,20 @@ npm install -g @0xsnx/subbridge
 subbridge build -i proxies.yaml -o singbox-config.json
 ```
 
-> 注：SubBridge 0.3.0 默认模板会写入 `independent_cache`（sing-box 1.14.0 已废弃），本仓库生成的配置已删除该字段。
+> 注：SubBridge 0.3.0 默认模板会写入 `independent_cache`（sing-box 1.14.0 已废弃），本仓库的后处理脚本 `scripts/enrich-singbox.js` 自动删除该字段。
 
-## 三个配置版本
+## 四个配置版本
 
-仓库内提供三版，互相独立、可并存，按需选用：
+仓库内提供四版，互相独立、可并存，按需选用：
 
 | 文件 | 定位 | 规则集来源 |
 | --- | --- | --- |
 | `singbox-config.json` | 基础 / 推荐版 | MetaCubeX：`geosite-cn` / `geoip-cn` / `geosite-ads` |
 | `singbox-config-cn.json` | 国内增强版 | 基础版 + **Repcz** 现成国内集（`ChinaDomain` / `ChinaIP` / `Ads_EasyListChina`） |
 | `singbox-config-geo.json` | 地区分流版 | 增强版 + 按服务流媒体路由（见下） |
+| `singbox-config-geo-pro.json` | 职业版 | 地区分流版 + FakeIP + Clash API + strict_route (见下) |
 
-三版均包含全部 16 个节点（trojan / hysteria2 / shadowsocks）+ 国家分组（🇺🇸🇩🇪🇬🇧🇫🇷🇳🇱🇷🇺🇮🇳 的 selector / urltest）、tun 入站、DNS 与 4 条基础路由。
+四版均包含全部 16 个节点（trojan / hysteria2 / shadowsocks）+ 国家分组（🇺🇸🇩🇪🇬🇧🇫🇷🇳🇱🇷🇺🇮🇳 的 selector / urltest）、tun 入站、DNS 与基础路由。此外通过后处理脚本自动应用了多项优化：`cache_file` 持久化节点选择、TUN `stack: system`、DNS `prefer_ipv4` 与备选 DNS、NTP 时间同步、`sniff_override_destination`、trojan 节点 TLS UTLS Chrome 指纹、hysteria2 `tls.enabled`、`tcp_fast_open` 等。
 
 ### 地区分流版路由逻辑
 
@@ -35,6 +36,17 @@ subbridge build -i proxies.yaml -o singbox-config.json
 - bilibili → direct（国内直连）
 - openai / youtube / google 等 → 走 `final`（🚀节点）
 
+### 职业版（`singbox-config-geo-pro.json`）额外特性
+
+在地区分流版基础上新增：
+
+- **FakeIP**（`198.18.0.0/15`）— DNS 查询全部返回虚拟 IP，减少 DNS 泄漏与查询延迟
+- **Clash API**（`:9090`）— 提供 RESTful API，可在仪表盘切换节点、查看流量
+- **`strict_route`** — 禁止非本机流量经过 TUN，防止路由环路
+- **DNS block server**（`rcode://success`）— 广告域名直接返回空响应，而非走代理
+
+推荐搭配 **FakeIP 缓存**：`cache_file` 会记住 IP→域名映射，重启后不走重复解析。
+
 ## 使用方法
 
 ### 1. 选版本
@@ -42,6 +54,7 @@ subbridge build -i proxies.yaml -o singbox-config.json
 - 只想国内直连 + 基础广告拦截 → `singbox-config.json`
 - 想要更全的国内域名 / IP 白名单与国内广告拦截 → `singbox-config-cn.json`
 - 想让流媒体按版权地区走对应国家节点（如 Netflix 走美国）→ `singbox-config-geo.json`
+- 需要 FakeIP + Clash API 管理面板 → `singbox-config-geo-pro.json`
 
 ### 2. 命令行 sing-box（原生）
 
@@ -65,12 +78,12 @@ sing-box run
 
 ### 4. 验证
 
-启动后查看日志：本仓库三版均为 **1.12+ 格式**，正常应**无 `legacy dns` 警告**；若出现，说明客户端内核过旧，请升级到支持 1.12+ 的 sing-box 版本。
+启动后查看日志：本仓库四版均为 **1.12+ 格式**，正常应**无 `legacy dns` 警告**；若出现，说明客户端内核过旧，请升级到支持 1.12+ 的 sing-box 版本。
 
 ## 注意事项
 
-- 三版均为 **sing-box 1.12+ 格式，无 `legacy dns`**，适用于当前主流 sing-box / GUI 客户端。
-- `route.rule_set` 中的 `.srs` 规则集通过 `download_detour: "direct"` 从 `raw.githubusercontent.com` 拉取 —— **客户端本机需能直连该域名**。若网络无法直连，可将该字段改为走代理的节点 tag，或预先下载 `.srs` 改为本地 `path` 引用。
+- 四版均为 **sing-box 1.12+ 格式，无 `legacy dns`**，适用于当前主流 sing-box / GUI 客户端。
+- `route.rule_set` 中的 `.srs` 规则集通过 `download_detour: "direct"` 从 **testingcf.jsdelivr.net（jsdelivr CDN）**拉取 —— **客户端需能访问 jsdelivr CDN**。若网络无法直接拉取，可将该字段改为走代理的节点 tag，或预先下载 `.srs` 改为本地 `path` 引用。
 - 原 `proxies.yaml` **未改动**，Clash / Mihomo 用户继续用原订阅即可。
 - 原 Clash 约 10000 条 `rules` **未逐条转换**：按你的要求改用 GitHub 现成规则集（MetaCubeX / Repcz）替代，零手工转译、零维护成本。
 - `route.rules` 里使用的 `outbound` 字段是 1.12+ 标准用法，与 `dns.rules` 里已废弃的 `outbound` 旧写法无关，不会触发 `legacy dns` 警告。
