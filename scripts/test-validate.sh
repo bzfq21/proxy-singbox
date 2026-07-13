@@ -91,7 +91,8 @@ for f in "${CONFIGS[@]}"; do
       ['TUN stack system',            tun?.stack === 'system'],
       ['ip_is_private route rule',    c.route?.rules?.some(r => r.ip_is_private === true)],
       ['hijack-dns route rule',       c.route?.rules?.some(r => r.action === 'hijack-dns')],
-      ['sniff route action',          c.route?.rules?.some(r => r.action === 'sniff') || tun?.sniff === true],
+      ['no block action (1.13)',      c.route?.rules?.every(r => r.action !== 'block')],
+      ['sniff route action',          c.route?.rules?.some(r => r.action === 'sniff')],
     ];
     const failed = checks.filter(([k,v]) => !v).map(([k]) => k);
     if (failed.length) { console.log('FAIL:', failed.join(', ')); process.exit(1); }

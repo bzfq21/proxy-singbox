@@ -57,8 +57,7 @@
       ],
       "auto_route": true,
       "stack": "system",
-      "strict_route": true,
-      "sniff": true
+      "strict_route": true
     }
   ],
   "outbounds": [
@@ -1930,10 +1929,6 @@
     {
       "type": "direct",
       "tag": "direct"
-    },
-    {
-      "type": "block",
-      "tag": "block"
     }
   ],
   "route": {
@@ -2057,7 +2052,7 @@
           "geosite-ads",
           "repcz-ads-cn"
         ],
-        "outbound": "block"
+        "action": "reject"
       },
       {
         "rule_set": [

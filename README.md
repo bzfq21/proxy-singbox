@@ -1,6 +1,6 @@
 # proxy-singbox — sing-box 配置聚合
 
-将 [PuddinCat/BestClash](https://github.com/PuddinCat/BestClash) 的 Clash 订阅与免费节点池融合，自动构建 **sing-box 1.12+** 配置。
+将 [PuddinCat/BestClash](https://github.com/PuddinCat/BestClash) 的 Clash 订阅与免费节点池融合，自动构建 **sing-box 1.13+** 配置。
 
 每 30 分钟自动更新：抓取上游 `proxies.yaml` + 免费节点池 → SubBridge 转换 → 优化注入 → 推送。
 

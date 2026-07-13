@@ -126,6 +126,8 @@ function applyBaseOptimizations(cfg) {
   if (tunIn && tunIn.strict_route === undefined) {
     tunIn.strict_route = true;
   }
+  // sniff on TUN inbound removed in sing-box 1.13; route { action: 'sniff' } is sufficient
+  if (tunIn) delete tunIn.sniff;
   if (cfg.dns?.servers && !cfg.dns.servers.some(s => s.tag === 'local-alt')) {
     cfg.dns.servers.push({ tag: 'local-alt', type: 'udp', server: '114.114.114.114' });
   }
@@ -135,11 +137,7 @@ function applyBaseOptimizations(cfg) {
   if (!cfg.ntp) {
     cfg.ntp = { enabled: true, server: 'time.cloudflare.com' };
   }
-  // sniff_override_destination is deprecated in 1.12+, moved to route action.
-  // We enable sniff on TUN inbound instead.
-  if (tunIn && tunIn.sniff === undefined) {
-    tunIn.sniff = true;
-  }
+  // sniff in TUN inbound is removed in 1.13; route action { action: 'sniff' } is sufficient.
   // ip_is_private rule: route RFC1918 traffic directly (official template pattern)
   {
     const dnsIdx = cfg.route.rules.findIndex(r => r.action === 'hijack-dns');
@@ -159,6 +157,28 @@ function applyBaseOptimizations(cfg) {
   delete cfg.platform;
 }
 applyBaseOptimizations(config);
+
+// ---- 1.13 migration: replace legacy type:block outbound with route action ----
+const blockTag = config.outbounds?.find(ob => ob.type === 'block')?.tag;
+if (blockTag) {
+  for (const rule of config.route.rules) {
+    if (rule.outbound === blockTag) {
+      delete rule.outbound;
+      rule.action = 'reject';
+    }
+  }
+  for (const rule of config.dns?.rules ?? []) {
+    if (rule.server === blockTag) {
+      rule.server = 'block-dns';
+    }
+  }
+  config.outbounds = config.outbounds.filter(ob => ob.type !== 'block');
+}
+for (const rule of config.route.rules) {
+  if (rule.action === 'block') {
+    rule.action = 'reject';
+  }
+}
 // cache_file removed from all variants — old clients (pre-1.8) reject it
 // and its absence has no functional impact.
 delete config.cache_file;
@@ -174,7 +194,7 @@ const adsIdx = findRuleIndex(cn, ['geosite-ads']);
 if (adsIdx >= 0) {
   cn.route.rules[adsIdx] = {
     rule_set: ['geosite-ads', 'repcz-ads-cn'],
-    outbound: 'block',
+    action: 'reject',
   };
 }
 
