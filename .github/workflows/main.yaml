@@ -25,15 +25,20 @@ jobs:
           curl -sL -o /tmp/proxies.yaml \
             "https://raw.githubusercontent.com/PuddinCat/BestClash/refs/heads/main/proxies.yaml"
 
+      - name: Fetch extra free node sources
+        run: |
+          curl -sL -o /tmp/extra.yaml \
+            "https://raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash.yaml"
+
       - name: Build base sing-box config
-        run: subbridge build -i /tmp/proxies.yaml -o singbox-config.json
+        run: subbridge build -i /tmp/proxies.yaml -i /tmp/extra.yaml -o singbox-config.json
 
       - name: Enrich configs (cn + geo versions)
         run: node scripts/enrich-singbox.js
 
       - name: Commit and push
         run: |
-          git add singbox-config.json singbox-config-cn.json singbox-config-geo.json
+          git add singbox-config*.json
           if git diff --cached --quiet; then
             echo "up to date — no changes"
           else
