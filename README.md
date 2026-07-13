@@ -25,7 +25,7 @@
 | Netflix / Disney / BBC 等媒体分流 | — | — | ✅ | ✅ |
 | FakeIP（减少 DNS 泄漏） | — | — | — | ✅ |
 | Clash API（:9090 仪表盘） | — | — | — | ✅ |
-| strict_route（防路由环路） | — | — | — | ✅ |
+| strict_route（防路由环路） | ✅ | ✅ | ✅ | ✅ |
 | DNS block server（广告零响应） | — | — | — | ✅ |
 
 ### 使用方法

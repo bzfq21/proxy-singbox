@@ -41,7 +41,9 @@
         "fdfe:dcba:9876::1/126"
       ],
       "auto_route": true,
-      "stack": "system"
+      "stack": "system",
+      "strict_route": true,
+      "sniff": true
     }
   ],
   "outbounds": [
@@ -1955,6 +1957,10 @@
         "action": "hijack-dns"
       },
       {
+        "ip_is_private": true,
+        "outbound": "direct"
+      },
+      {
         "rule_set": [
           "geosite-ads"
         ],
@@ -1970,13 +1976,12 @@
     ],
     "auto_detect_interface": true,
     "default_domain_resolver": "local",
-    "final": "🚀 节点",
-    "sniff_override_destination": true
+    "final": "🚀 节点"
   },
   "cache_file": {
     "enabled": true,
     "path": "cache.db",
-    "cache_id": "singbox"
+    "cache_id": "base"
   },
   "ntp": {
     "enabled": true,

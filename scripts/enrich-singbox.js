@@ -3,13 +3,20 @@ const path = require('path');
 
 const INPUT = process.argv[2] || 'singbox-config.json';
 const OUT_DIR = process.argv[3] || '.';
+const CDN = 'https://testingcf.jsdelivr.net/gh';
 
 const config = JSON.parse(fs.readFileSync(INPUT, 'utf8'));
 
-// Clean up deprecated fields
-if (config.dns?.independent_cache !== undefined) {
-  delete config.dns.independent_cache;
+for (const key of ['route', 'route.rule_set', 'route.rules', 'dns', 'dns.servers', 'outbounds', 'inbounds']) {
+  const parts = key.split('.');
+  let obj = config;
+  for (const p of parts) {
+    if (obj == null) throw new Error(`Input config missing: \`${key}\` — check ${INPUT}`);
+    obj = obj[p];
+  }
 }
+
+// independent_cache is kept for FakeIP variants; set explicitly in pro section
 
 // Fix hysteria2 outbounds: tls.enabled required in sing-box 1.12+
 for (const ob of config.outbounds) {
@@ -25,15 +32,13 @@ for (const ob of config.outbounds) {
 }
 
 function ruleSetUrlCDN(url) {
-  // Handle: https://github.com/OWNER/REPO/raw/BRANCH/PATH
   url = url.replace(
     /^https?:\/\/github\.com\/([^\/]+)\/([^\/]+)\/raw\/([^\/]+)\/(.+)$/,
-    'https://testingcf.jsdelivr.net/gh/$1/$2@$3/$4'
+    `${CDN}/$1/$2@$3/$4`
   );
-  // Handle: https://raw.githubusercontent.com/OWNER/REPO/BRANCH/PATH
   url = url.replace(
     /^https?:\/\/raw\.githubusercontent\.com\/([^\/]+)\/([^\/]+)\/([^\/]+)\/(.+)$/,
-    'https://testingcf.jsdelivr.net/gh/$1/$2@$3/$4'
+    `${CDN}/$1/$2@$3/$4`
   );
   return url;
 }
@@ -47,7 +52,6 @@ function ruleSetEntry(tag, url) {
   return {
     type: 'remote',
     tag,
-    format: 'binary',
     url,
     download_detour: 'direct',
     update_interval: '3d',
@@ -68,6 +72,20 @@ function findRuleIndex(cfg, matchTags) {
   return cfg.route.rules.findIndex(
     r => r.rule_set && matchTags.every(t => r.rule_set.includes(t))
   );
+}
+
+function setCacheId(cfg, id) {
+  if (!cfg.cache_file) cfg.cache_file = { enabled: true, path: 'cache.db' };
+  cfg.cache_file.cache_id = id;
+}
+
+function writeVariant(cfg, name) {
+  setCacheId(cfg, name);
+  const FILE_NAMES = { base: 'singbox-config.json', cn: 'singbox-config-cn.json', geo: 'singbox-config-geo.json', pro: 'singbox-config-geo-pro.json' };
+  const file = FILE_NAMES[name];
+  if (!file) throw new Error(`Unknown variant: ${name}`);
+  fs.writeFileSync(path.join(OUT_DIR, file), JSON.stringify(cfg, null, 2));
+  console.log(`✅ ${name}: ${file}`);
 }
 
 // ---- Repcz China rule sets ----
@@ -102,11 +120,15 @@ const MEDIA_ROUTE_RULES = [
 
 function applyBaseOptimizations(cfg) {
   if (!cfg.cache_file) {
-    cfg.cache_file = { enabled: true, path: 'cache.db', cache_id: 'singbox' };
+    cfg.cache_file = { enabled: true, path: 'cache.db' };
   }
   const tunIn = cfg.inbounds?.find(i => i.type === 'tun');
   if (tunIn && !tunIn.stack) {
     tunIn.stack = 'system';
+  }
+  // strict_route prevents routing loops; required per official template
+  if (tunIn && tunIn.strict_route === undefined) {
+    tunIn.strict_route = true;
   }
   if (cfg.dns?.servers && !cfg.dns.servers.some(s => s.tag === 'local-alt')) {
     cfg.dns.servers.push({ tag: 'local-alt', type: 'udp', server: '114.114.114.114' });
@@ -117,8 +139,18 @@ function applyBaseOptimizations(cfg) {
   if (!cfg.ntp) {
     cfg.ntp = { enabled: true, server: 'time.cloudflare.com' };
   }
-  if (cfg.route && cfg.route.sniff_override_destination === undefined) {
-    cfg.route.sniff_override_destination = true;
+  // sniff_override_destination is deprecated in 1.12+, moved to route action.
+  // We enable sniff on TUN inbound instead.
+  if (tunIn && tunIn.sniff === undefined) {
+    tunIn.sniff = true;
+  }
+  // ip_is_private rule: route RFC1918 traffic directly (official template pattern)
+  {
+    const dnsIdx = cfg.route.rules.findIndex(r => r.action === 'hijack-dns');
+    const hasPrivate = cfg.route.rules.some(r => r.ip_is_private === true);
+    if (!hasPrivate && dnsIdx >= 0) {
+      cfg.route.rules.splice(dnsIdx + 1, 0, { ip_is_private: true, outbound: 'direct' });
+    }
   }
   if (!cfg.platform) {
     cfg.platform = { http_proxy: { enabled: false } };
@@ -133,9 +165,7 @@ function applyBaseOptimizations(cfg) {
 }
 applyBaseOptimizations(config);
 
-// ---- Write base (cleaned) ----
-fs.writeFileSync(path.join(OUT_DIR, 'singbox-config.json'), JSON.stringify(config, null, 2));
-console.log('✅ base: singbox-config.json');
+writeVariant(config, 'base');
 
 // ---- Build cn version ----
 
@@ -158,8 +188,7 @@ if (cnIdx >= 0) {
   };
 }
 
-fs.writeFileSync(path.join(OUT_DIR, 'singbox-config-cn.json'), JSON.stringify(cn, null, 2));
-console.log('✅ cn: singbox-config-cn.json');
+writeVariant(cn, 'cn');
 
 // ---- Build geo version ----
 
@@ -177,27 +206,25 @@ if (geoAdsIdx >= 0 && geoCnIdx > geoAdsIdx) {
   geo.route.rules.splice(-1, 0, ...MEDIA_ROUTE_RULES);
 }
 
-fs.writeFileSync(path.join(OUT_DIR, 'singbox-config-geo.json'), JSON.stringify(geo, null, 2));
-console.log('✅ geo: singbox-config-geo.json');
+writeVariant(geo, 'geo');
 
 // ---- Build pro version ----
 
 const pro = JSON.parse(JSON.stringify(geo));
 
-pro.dns.fakeip = { enabled: true, inet4_range: '198.18.0.0/15', inet6_range: 'fc00::/18' };
+// dns.fakeip top-level is deprecated in 1.12+; using type:fakeip server instead
 pro.dns.servers = [
   { tag: 'local', type: 'udp', server: '223.5.5.5' },
   { tag: 'local-alt', type: 'udp', server: '114.114.114.114' },
   { tag: 'block-dns', type: 'block', server: 'rcode://success' },
-  { tag: 'fakeip', type: 'fakeip', resolver: 'local' },
+  { tag: 'fakeip', type: 'fakeip', resolver: 'local', inet4_range: '198.18.0.0/15', inet6_range: 'fc00::/18' },
 ];
 pro.dns.rules = [
   { rule_set: ['geosite-ads', 'repcz-ads-cn'], server: 'block-dns' },
   { rule_set: ['geosite-cn', 'repcz-cn-domain'], server: 'local' },
 ];
 pro.dns.final = 'fakeip';
-
-pro.route.strict_route = true;
+pro.dns.independent_cache = true;
 
 pro.experimental = {
   clash_api: {
@@ -207,5 +234,4 @@ pro.experimental = {
   },
 };
 
-fs.writeFileSync(path.join(OUT_DIR, 'singbox-config-geo-pro.json'), JSON.stringify(pro, null, 2));
-console.log('✅ pro: singbox-config-geo-pro.json');
+writeVariant(pro, 'pro');
