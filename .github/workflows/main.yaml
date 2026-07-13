@@ -1,30 +1,44 @@
-name: Fetch from server
+name: Auto build sing-box config
 on:
   schedule:
-    - cron: "10,40 * * * *"
+    - cron: "25,55 * * * *"
   workflow_dispatch:
 
 permissions:
   contents: write
 jobs:
-  scrape:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Config Github
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Install SubBridge
+        run: npm install -g @0xsnx/subbridge
+
+      - name: Fetch upstream proxies.yaml
         run: |
-          git config --local user.email "actions@github.com"
-          git config --local user.name "GitHub Actions"
-      - name: Just Do It
-        env:
-          PROXIES_URL: ${{ secrets.PROXIES_URL }}
+          curl -sL -o /tmp/proxies.yaml \
+            "https://raw.githubusercontent.com/PuddinCat/BestClash/refs/heads/main/proxies.yaml"
+
+      - name: Build base sing-box config
+        run: subbridge build -i /tmp/proxies.yaml -o singbox-config.json
+
+      - name: Enrich configs (cn + geo versions)
+        run: node scripts/enrich-singbox.js
+
+      - name: Commit and push
         run: |
-          timeout 10 curl -f "https://api.star-history.com/svg?repos=PuddinCat/BestClash&type=Date" > /tmp/stars.svg && mv /tmp/stars.svg .
-          curl $PROXIES_URL > proxies.yaml
-          ret=$?
-          length=$(wc -l < proxies.yaml)
-          if (( ret == 0 )) && (( length >= 10 )); then 
-            git add . && git commit -m 'Update: '"$(date)" && git push || echo 'nothing to push'
+          git add singbox-config.json singbox-config-cn.json singbox-config-geo.json
+          if git diff --cached --quiet; then
+            echo "up to date — no changes"
           else
-            echo error
+            git config user.email "actions@github.com"
+            git config user.name "GitHub Actions"
+            git commit -m "Auto build sing-box configs: $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
+            git push
           fi

@@ -1,0 +1,549 @@
+{
+  "log": {
+    "level": "info",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "local",
+        "type": "udp",
+        "server": "223.5.5.5"
+      },
+      {
+        "tag": "remote",
+        "type": "tls",
+        "server": "8.8.8.8",
+        "detour": "🚀 节点"
+      }
+    ],
+    "rules": [
+      {
+        "rule_set": [
+          "geosite-cn"
+        ],
+        "server": "local"
+      }
+    ],
+    "final": "remote"
+  },
+  "inbounds": [
+    {
+      "type": "tun",
+      "tag": "tun-in",
+      "address": [
+        "172.19.0.1/30",
+        "fdfe:dcba:9876::1/126"
+      ],
+      "auto_route": true
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "selector",
+      "tag": "🚀 节点",
+      "outbounds": [
+        "♻️ 自动",
+        "xx|f463|puddincat07@Telegram",
+        "xx|ea40|puddincat07@Telegram",
+        "xx|badf|puddincat07@Telegram",
+        "xx|2c29|puddincat07@Telegram",
+        "us|4d96|puddincat07@Telegram",
+        "gb|1af8|puddincat07@Telegram",
+        "nl|a3cf|puddincat07@Telegram",
+        "nl|0cb9|puddincat07@Telegram",
+        "fr|8cde|puddincat07@Telegram",
+        "in|1bfd|puddincat07@Telegram",
+        "xx|bf1e|puddincat07@Telegram",
+        "de|acb5|puddincat07@Telegram",
+        "fr|de52|puddincat07@Telegram",
+        "us|c070|puddincat07@Telegram",
+        "ru|3e90|puddincat07@Telegram",
+        "xx|7853|puddincat07@Telegram"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "♻️ 自动",
+      "outbounds": [
+        "xx|f463|puddincat07@Telegram",
+        "xx|ea40|puddincat07@Telegram",
+        "xx|badf|puddincat07@Telegram",
+        "xx|2c29|puddincat07@Telegram",
+        "us|4d96|puddincat07@Telegram",
+        "gb|1af8|puddincat07@Telegram",
+        "nl|a3cf|puddincat07@Telegram",
+        "nl|0cb9|puddincat07@Telegram",
+        "fr|8cde|puddincat07@Telegram",
+        "in|1bfd|puddincat07@Telegram",
+        "xx|bf1e|puddincat07@Telegram",
+        "de|acb5|puddincat07@Telegram",
+        "fr|de52|puddincat07@Telegram",
+        "us|c070|puddincat07@Telegram",
+        "ru|3e90|puddincat07@Telegram",
+        "xx|7853|puddincat07@Telegram"
+      ],
+      "interval": "5m",
+      "tolerance": 50
+    },
+    {
+      "type": "selector",
+      "tag": "🇺🇸 美国",
+      "outbounds": [
+        "🇺🇸 美国 - 自动",
+        "us|4d96|puddincat07@Telegram",
+        "us|c070|puddincat07@Telegram"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "🇺🇸 美国 - 自动",
+      "outbounds": [
+        "us|4d96|puddincat07@Telegram",
+        "us|c070|puddincat07@Telegram"
+      ],
+      "interval": "5m"
+    },
+    {
+      "type": "selector",
+      "tag": "🇩🇪 德国",
+      "outbounds": [
+        "🇩🇪 德国 - 自动",
+        "de|acb5|puddincat07@Telegram"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "🇩🇪 德国 - 自动",
+      "outbounds": [
+        "de|acb5|puddincat07@Telegram"
+      ],
+      "interval": "5m"
+    },
+    {
+      "type": "selector",
+      "tag": "🇬🇧 英国",
+      "outbounds": [
+        "🇬🇧 英国 - 自动",
+        "gb|1af8|puddincat07@Telegram"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "🇬🇧 英国 - 自动",
+      "outbounds": [
+        "gb|1af8|puddincat07@Telegram"
+      ],
+      "interval": "5m"
+    },
+    {
+      "type": "selector",
+      "tag": "🇫🇷 法国",
+      "outbounds": [
+        "🇫🇷 法国 - 自动",
+        "fr|8cde|puddincat07@Telegram",
+        "fr|de52|puddincat07@Telegram"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "🇫🇷 法国 - 自动",
+      "outbounds": [
+        "fr|8cde|puddincat07@Telegram",
+        "fr|de52|puddincat07@Telegram"
+      ],
+      "interval": "5m"
+    },
+    {
+      "type": "selector",
+      "tag": "🇳🇱 荷兰",
+      "outbounds": [
+        "🇳🇱 荷兰 - 自动",
+        "nl|a3cf|puddincat07@Telegram",
+        "nl|0cb9|puddincat07@Telegram"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "🇳🇱 荷兰 - 自动",
+      "outbounds": [
+        "nl|a3cf|puddincat07@Telegram",
+        "nl|0cb9|puddincat07@Telegram"
+      ],
+      "interval": "5m"
+    },
+    {
+      "type": "selector",
+      "tag": "🇷🇺 俄罗斯",
+      "outbounds": [
+        "🇷🇺 俄罗斯 - 自动",
+        "ru|3e90|puddincat07@Telegram"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "🇷🇺 俄罗斯 - 自动",
+      "outbounds": [
+        "ru|3e90|puddincat07@Telegram"
+      ],
+      "interval": "5m"
+    },
+    {
+      "type": "selector",
+      "tag": "🇮🇳 印度",
+      "outbounds": [
+        "🇮🇳 印度 - 自动",
+        "in|1bfd|puddincat07@Telegram"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "🇮🇳 印度 - 自动",
+      "outbounds": [
+        "in|1bfd|puddincat07@Telegram"
+      ],
+      "interval": "5m"
+    },
+    {
+      "type": "trojan",
+      "tag": "xx|f463|puddincat07@Telegram",
+      "server": "auto.mhjstudio.ir",
+      "server_port": 443,
+      "password": "dfdse334053vuohm",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "alternative.mhjstudio.ir"
+        }
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "xx|ea40|puddincat07@Telegram",
+      "server": "vn2.yuntong.click",
+      "server_port": 443,
+      "password": "f7cb07a0-e6f9-4d22-a60e-c61854450c89",
+      "obfs": {
+        "type": "salamander",
+        "password": "eNM/NfxTsBqQIKcN0ezARS1z0f5mIxRd9GSwhVsyJlo="
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "xx|badf|puddincat07@Telegram",
+      "server": "ff2.yuntong.click",
+      "server_port": 443,
+      "password": "f7cb07a0-e6f9-4d22-a60e-c61854450c89",
+      "obfs": {
+        "type": "salamander",
+        "password": "eNM/NfxTsBqQIKcN0ezARS1z0f5mIxRd9GSwhVsyJlo="
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "xx|2c29|puddincat07@Telegram",
+      "server": "jpbgp.netvigor.cc",
+      "server_port": 19128,
+      "password": "OccIqeORGQwiNkwS"
+    },
+    {
+      "type": "hysteria2",
+      "tag": "us|4d96|puddincat07@Telegram",
+      "server": "69.63.220.227",
+      "server_port": 443,
+      "password": "038663b35fe801158d3eca2dae5a6fb1",
+      "obfs": {
+        "type": "salamander",
+        "password": "7e3ea7dfee4694e5e0e73383"
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "gb|1af8|puddincat07@Telegram",
+      "server": "146.70.61.37",
+      "server_port": 8080,
+      "method": "rc4-md5",
+      "password": "14fFPrbezE3HDZzsMOr6"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "nl|a3cf|puddincat07@Telegram",
+      "server": "193.29.139.204",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "oZIoA69Q8yhcQV8ka3Pa3A"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "nl|0cb9|puddincat07@Telegram",
+      "server": "193.29.139.235",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "oZIoA69Q8yhcQV8ka3Pa3A"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "fr|8cde|puddincat07@Telegram",
+      "server": "15.237.218.22",
+      "server_port": 443,
+      "method": "aes-256-cfb",
+      "password": "amazonskr05"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "in|1bfd|puddincat07@Telegram",
+      "server": "103.111.114.80",
+      "server_port": 28061,
+      "method": "chacha20-ietf-poly1305",
+      "password": "WOir3lXBhMHDcLFPQdEZXPu37_pTQDCXfm"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "xx|bf1e|puddincat07@Telegram",
+      "server": "r3mrcg001287h3p.cybervena.com",
+      "server_port": 50099,
+      "method": "chacha20-ietf-poly1305",
+      "password": "7e731ec3-f8e1-43f6-92cf-3978d14705c4"
+    },
+    {
+      "type": "trojan",
+      "tag": "de|acb5|puddincat07@Telegram",
+      "server": "185.137.157.151",
+      "server_port": 443,
+      "password": "dh-Ws-YoJIgTYLZ-A5VljeduVse-vhDl7Q"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "fr|de52|puddincat07@Telegram",
+      "server": "35.180.122.124",
+      "server_port": 443,
+      "method": "aes-256-cfb",
+      "password": "amazonskr05"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "us|c070|puddincat07@Telegram",
+      "server": "3.14.255.108",
+      "server_port": 443,
+      "method": "aes-256-cfb",
+      "password": "amazonskr05"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "ru|3e90|puddincat07@Telegram",
+      "server": "78.153.149.211",
+      "server_port": 25365,
+      "method": "aes-128-gcm",
+      "password": "Telegram-ZEDMODEON"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "xx|7853|puddincat07@Telegram",
+      "server": "p231.panda004.net",
+      "server_port": 43926,
+      "method": "aes-256-cfb",
+      "password": "qwerREWQ@@"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ],
+  "route": {
+    "rule_set": [
+      {
+        "type": "remote",
+        "tag": "geosite-cn",
+        "format": "binary",
+        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo/geosite/cn.srs",
+        "download_detour": "direct",
+        "update_interval": "3d"
+      },
+      {
+        "type": "remote",
+        "tag": "geoip-cn",
+        "format": "binary",
+        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo/geoip/cn.srs",
+        "download_detour": "direct",
+        "update_interval": "3d"
+      },
+      {
+        "type": "remote",
+        "tag": "geosite-ads",
+        "format": "binary",
+        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo/geosite/category-ads-all.srs",
+        "download_detour": "direct",
+        "update_interval": "3d"
+      },
+      {
+        "type": "remote",
+        "tag": "repcz-cn-domain",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/Repcz/Tool/X/sing-box/Rules/ChinaDomain.srs",
+        "download_detour": "direct",
+        "update_interval": "3d"
+      },
+      {
+        "type": "remote",
+        "tag": "repcz-cn-ip",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/Repcz/Tool/X/sing-box/Rules/ChinaIP.srs",
+        "download_detour": "direct",
+        "update_interval": "3d"
+      },
+      {
+        "type": "remote",
+        "tag": "repcz-ads-cn",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/Repcz/Tool/X/sing-box/Rules/Ads_EasyListChina.srs",
+        "download_detour": "direct",
+        "update_interval": "3d"
+      },
+      {
+        "type": "remote",
+        "tag": "netflix",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/netflix.srs",
+        "download_detour": "direct",
+        "update_interval": "3d"
+      },
+      {
+        "type": "remote",
+        "tag": "disney",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/disney.srs",
+        "download_detour": "direct",
+        "update_interval": "3d"
+      },
+      {
+        "type": "remote",
+        "tag": "primevideo",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/primevideo.srs",
+        "download_detour": "direct",
+        "update_interval": "3d"
+      },
+      {
+        "type": "remote",
+        "tag": "hulu",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/hulu.srs",
+        "download_detour": "direct",
+        "update_interval": "3d"
+      },
+      {
+        "type": "remote",
+        "tag": "hbo",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/hbo.srs",
+        "download_detour": "direct",
+        "update_interval": "3d"
+      },
+      {
+        "type": "remote",
+        "tag": "spotify",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/spotify.srs",
+        "download_detour": "direct",
+        "update_interval": "3d"
+      },
+      {
+        "type": "remote",
+        "tag": "bbc",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/bbc.srs",
+        "download_detour": "direct",
+        "update_interval": "3d"
+      },
+      {
+        "type": "remote",
+        "tag": "bilibili",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/bilibili.srs",
+        "download_detour": "direct",
+        "update_interval": "3d"
+      }
+    ],
+    "rules": [
+      {
+        "action": "sniff"
+      },
+      {
+        "protocol": "dns",
+        "action": "hijack-dns"
+      },
+      {
+        "rule_set": [
+          "geosite-ads",
+          "repcz-ads-cn"
+        ],
+        "outbound": "block"
+      },
+      {
+        "rule_set": [
+          "netflix"
+        ],
+        "outbound": "🇺🇸 美国"
+      },
+      {
+        "rule_set": [
+          "disney"
+        ],
+        "outbound": "🇺🇸 美国"
+      },
+      {
+        "rule_set": [
+          "primevideo"
+        ],
+        "outbound": "🇺🇸 美国"
+      },
+      {
+        "rule_set": [
+          "hulu"
+        ],
+        "outbound": "🇺🇸 美国"
+      },
+      {
+        "rule_set": [
+          "hbo"
+        ],
+        "outbound": "🇺🇸 美国"
+      },
+      {
+        "rule_set": [
+          "spotify"
+        ],
+        "outbound": "🇺🇸 美国"
+      },
+      {
+        "rule_set": [
+          "bbc"
+        ],
+        "outbound": "🇬🇧 英国"
+      },
+      {
+        "rule_set": [
+          "bilibili"
+        ],
+        "outbound": "direct"
+      },
+      {
+        "rule_set": [
+          "geosite-cn",
+          "geoip-cn",
+          "repcz-cn-domain",
+          "repcz-cn-ip"
+        ],
+        "outbound": "direct"
+      }
+    ],
+    "auto_detect_interface": true,
+    "default_domain_resolver": "local",
+    "final": "🚀 节点"
+  }
+}

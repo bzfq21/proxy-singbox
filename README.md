@@ -52,3 +52,7 @@ https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/base64
 https://raw.githubusercontent.com/zhangkaiitugithub/passcro/main/speednodes.yaml
 https://tt.vg/freeclash
 ```
+
+# 其他客户端（sing-box）
+
+`proxies.yaml` 是 Clash 格式，sing-box 内核不原生支持，需先转换。仓库已提供三个转换好的 sing-box 1.12+ 配置（`singbox-config.json` / `singbox-config-cn.json` / `singbox-config-geo.json`），详见 [SINGBOX.md](./SINGBOX.md)。
