@@ -60,7 +60,7 @@ sing-box run
 
 - **本地导入**：在客户端里选择「导入本地配置 / 从文件加载」，指向仓库里的 `singbox-config-*.json`。
 - **订阅链接**：若仓库部署了可访问的 URL，把
-  `  https://raw.githubusercontent.com/bzfq21/BestClash/refs/heads/my-changes/singbox-config-geo.json`
+  `  https://raw.githubusercontent.com/bzfq21/BestClash/refs/heads/main/singbox-config-geo.json`
   作为订阅地址填入（按需替换文件名）。
 
 ### 4. 验证

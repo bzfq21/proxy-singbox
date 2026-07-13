@@ -49,14 +49,14 @@ const REPCZ_RULES = [
 ];
 
 const MEDIA_RULES = [
-  ruleSetEntry('netflix', 'https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo/geosite/netflix.srs'),
-  ruleSetEntry('disney', 'https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo/geosite/disney.srs'),
-  ruleSetEntry('primevideo', 'https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo/geosite/primevideo.srs'),
-  ruleSetEntry('hulu', 'https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo/geosite/hulu.srs'),
-  ruleSetEntry('hbo', 'https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo/geosite/hbo.srs'),
-  ruleSetEntry('spotify', 'https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo/geosite/spotify.srs'),
-  ruleSetEntry('bbc', 'https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo/geosite/bbc.srs'),
-  ruleSetEntry('bilibili', 'https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo/geosite/bilibili.srs'),
+  ruleSetEntry('netflix', 'https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/netflix.srs'),
+  ruleSetEntry('disney', 'https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/disney.srs'),
+  ruleSetEntry('primevideo', 'https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/primevideo.srs'),
+  ruleSetEntry('hulu', 'https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/hulu.srs'),
+  ruleSetEntry('hbo', 'https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/hbo.srs'),
+  ruleSetEntry('spotify', 'https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/spotify.srs'),
+  ruleSetEntry('bbc', 'https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/bbc.srs'),
+  ruleSetEntry('bilibili', 'https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/bilibili.srs'),
 ];
 
 const MEDIA_ROUTE_RULES = [
@@ -111,7 +111,7 @@ if (geoAdsIdx >= 0 && geoCnIdx > geoAdsIdx) {
   // Insert media rules after ads block, before cn-direct
   geo.route.rules.splice(geoCnIdx, 0, ...MEDIA_ROUTE_RULES);
 } else {
-  console.error('⚠️ Could not locate rule positions for media injection; appending instead.');
+  console.error('⚠️ Could not locate rule positions for media injection; inserting before cn-direct.');
   geo.route.rules.splice(-1, 0, ...MEDIA_ROUTE_RULES);
 }
 
