@@ -147,3 +147,32 @@ if (geoAdsIdx >= 0 && geoCnIdx > geoAdsIdx) {
 
 fs.writeFileSync(path.join(OUT_DIR, 'singbox-config-geo.json'), JSON.stringify(geo, null, 2));
 console.log('✅ geo: singbox-config-geo.json');
+
+// ---- Build pro version ----
+
+const pro = JSON.parse(JSON.stringify(geo));
+
+pro.dns.fakeip = { enabled: true, inet4_range: '198.18.0.0/15', inet6_range: 'fc00::/18' };
+pro.dns.servers = [
+  { tag: 'local', type: 'udp', server: '223.5.5.5' },
+  { tag: 'block-dns', type: 'block', server: 'rcode://success' },
+  { tag: 'fakeip', type: 'fakeip', resolver: 'local' },
+];
+pro.dns.rules = [
+  { rule_set: ['geosite-ads', 'repcz-ads-cn'], server: 'block-dns' },
+  { rule_set: ['geosite-cn', 'repcz-cn-domain'], server: 'local' },
+];
+pro.dns.final = 'fakeip';
+
+pro.route.strict_route = true;
+
+pro.experimental = {
+  clash_api: {
+    external_controller: '127.0.0.1:9090',
+    external_ui: '',
+    secret: '',
+  },
+};
+
+fs.writeFileSync(path.join(OUT_DIR, 'singbox-config-geo-pro.json'), JSON.stringify(pro, null, 2));
+console.log('✅ pro: singbox-config-geo-pro.json');
