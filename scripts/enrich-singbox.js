@@ -128,11 +128,7 @@ function applyBaseOptimizations(cfg) {
       ob.tcp_fast_open = true;
     }
   }
-  for (const ob of cfg.outbounds) {
-    if (ob.type === 'urltest' && ob.connect_timeout === undefined) {
-      ob.connect_timeout = '8s';
-    }
-  }
+  // urltest does not support connect_timeout (sing-box rejects unknown fields)
   cfg.log = { level: 'warn' };
 }
 applyBaseOptimizations(config);

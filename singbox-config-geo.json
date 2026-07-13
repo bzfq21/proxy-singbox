@@ -308,8 +308,7 @@
         "🟢🇳🇱[📺🎭🎪]_github.com/Ruk1ng001_f16d2d90"
       ],
       "interval": "5m",
-      "tolerance": 50,
-      "connect_timeout": "8s"
+      "tolerance": 50
     },
     {
       "type": "selector",
@@ -327,8 +326,7 @@
         "us|4d96|puddincat07@Telegram",
         "us|c070|puddincat07@Telegram"
       ],
-      "interval": "5m",
-      "connect_timeout": "8s"
+      "interval": "5m"
     },
     {
       "type": "selector",
@@ -344,8 +342,7 @@
       "outbounds": [
         "de|acb5|puddincat07@Telegram"
       ],
-      "interval": "5m",
-      "connect_timeout": "8s"
+      "interval": "5m"
     },
     {
       "type": "selector",
@@ -361,8 +358,7 @@
       "outbounds": [
         "gb|1af8|puddincat07@Telegram"
       ],
-      "interval": "5m",
-      "connect_timeout": "8s"
+      "interval": "5m"
     },
     {
       "type": "selector",
@@ -380,8 +376,7 @@
         "fr|8cde|puddincat07@Telegram",
         "fr|de52|puddincat07@Telegram"
       ],
-      "interval": "5m",
-      "connect_timeout": "8s"
+      "interval": "5m"
     },
     {
       "type": "selector",
@@ -399,8 +394,7 @@
         "nl|a3cf|puddincat07@Telegram",
         "nl|0cb9|puddincat07@Telegram"
       ],
-      "interval": "5m",
-      "connect_timeout": "8s"
+      "interval": "5m"
     },
     {
       "type": "selector",
@@ -416,8 +410,7 @@
       "outbounds": [
         "ru|3e90|puddincat07@Telegram"
       ],
-      "interval": "5m",
-      "connect_timeout": "8s"
+      "interval": "5m"
     },
     {
       "type": "selector",
@@ -433,8 +426,7 @@
       "outbounds": [
         "in|1bfd|puddincat07@Telegram"
       ],
-      "interval": "5m",
-      "connect_timeout": "8s"
+      "interval": "5m"
     },
     {
       "type": "trojan",
