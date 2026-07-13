@@ -217,6 +217,13 @@
         "headers": {
           "Host": "alternative.mhjstudio.ir"
         }
+      },
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       }
     },
     {
@@ -252,7 +259,14 @@
       "tag": "xx|2c29|puddincat07@Telegram",
       "server": "jpbgp.netvigor.cc",
       "server_port": 19128,
-      "password": "OccIqeORGQwiNkwS"
+      "password": "OccIqeORGQwiNkwS",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
     },
     {
       "type": "hysteria2",
@@ -321,7 +335,14 @@
       "tag": "de|acb5|puddincat07@Telegram",
       "server": "185.137.157.151",
       "server_port": 443,
-      "password": "dh-Ws-YoJIgTYLZ-A5VljeduVse-vhDl7Q"
+      "password": "dh-Ws-YoJIgTYLZ-A5VljeduVse-vhDl7Q",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
     },
     {
       "type": "shadowsocks",
@@ -370,7 +391,7 @@
         "type": "remote",
         "tag": "geosite-cn",
         "format": "binary",
-        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo/geosite/cn.srs",
+        "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/cn.srs",
         "download_detour": "direct",
         "update_interval": "3d"
       },
@@ -378,7 +399,7 @@
         "type": "remote",
         "tag": "geoip-cn",
         "format": "binary",
-        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo/geoip/cn.srs",
+        "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geoip/cn.srs",
         "download_detour": "direct",
         "update_interval": "3d"
       },
@@ -386,7 +407,7 @@
         "type": "remote",
         "tag": "geosite-ads",
         "format": "binary",
-        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo/geosite/category-ads-all.srs",
+        "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/category-ads-all.srs",
         "download_detour": "direct",
         "update_interval": "3d"
       },
@@ -394,7 +415,7 @@
         "type": "remote",
         "tag": "repcz-cn-domain",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/Repcz/Tool/X/sing-box/Rules/ChinaDomain.srs",
+        "url": "https://testingcf.jsdelivr.net/gh/Repcz/Tool@X/sing-box/Rules/ChinaDomain.srs",
         "download_detour": "direct",
         "update_interval": "3d"
       },
@@ -402,7 +423,7 @@
         "type": "remote",
         "tag": "repcz-cn-ip",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/Repcz/Tool/X/sing-box/Rules/ChinaIP.srs",
+        "url": "https://testingcf.jsdelivr.net/gh/Repcz/Tool@X/sing-box/Rules/ChinaIP.srs",
         "download_detour": "direct",
         "update_interval": "3d"
       },
@@ -410,7 +431,7 @@
         "type": "remote",
         "tag": "repcz-ads-cn",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/Repcz/Tool/X/sing-box/Rules/Ads_EasyListChina.srs",
+        "url": "https://testingcf.jsdelivr.net/gh/Repcz/Tool@X/sing-box/Rules/Ads_EasyListChina.srs",
         "download_detour": "direct",
         "update_interval": "3d"
       },
@@ -418,7 +439,7 @@
         "type": "remote",
         "tag": "netflix",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/netflix.srs",
+        "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/netflix.srs",
         "download_detour": "direct",
         "update_interval": "3d"
       },
@@ -426,7 +447,7 @@
         "type": "remote",
         "tag": "disney",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/disney.srs",
+        "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/disney.srs",
         "download_detour": "direct",
         "update_interval": "3d"
       },
@@ -434,7 +455,7 @@
         "type": "remote",
         "tag": "primevideo",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/primevideo.srs",
+        "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/primevideo.srs",
         "download_detour": "direct",
         "update_interval": "3d"
       },
@@ -442,7 +463,7 @@
         "type": "remote",
         "tag": "hulu",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/hulu.srs",
+        "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/hulu.srs",
         "download_detour": "direct",
         "update_interval": "3d"
       },
@@ -450,7 +471,7 @@
         "type": "remote",
         "tag": "hbo",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/hbo.srs",
+        "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/hbo.srs",
         "download_detour": "direct",
         "update_interval": "3d"
       },
@@ -458,7 +479,7 @@
         "type": "remote",
         "tag": "spotify",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/spotify.srs",
+        "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/spotify.srs",
         "download_detour": "direct",
         "update_interval": "3d"
       },
@@ -466,7 +487,7 @@
         "type": "remote",
         "tag": "bbc",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/bbc.srs",
+        "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/bbc.srs",
         "download_detour": "direct",
         "update_interval": "3d"
       },
@@ -474,7 +495,7 @@
         "type": "remote",
         "tag": "bilibili",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/bilibili.srs",
+        "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/bilibili.srs",
         "download_detour": "direct",
         "update_interval": "3d"
       }

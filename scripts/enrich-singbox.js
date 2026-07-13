@@ -18,6 +18,29 @@ for (const ob of config.outbounds) {
   }
 }
 
+for (const ob of config.outbounds) {
+  if (ob.type === 'trojan') {
+    ob.tls = { enabled: true, utls: { enabled: true, fingerprint: 'chrome' } };
+  }
+}
+
+function ruleSetUrlCDN(url) {
+  // Handle: https://github.com/OWNER/REPO/raw/BRANCH/PATH
+  url = url.replace(
+    /^https?:\/\/github\.com\/([^\/]+)\/([^\/]+)\/raw\/([^\/]+)\/(.+)$/,
+    'https://testingcf.jsdelivr.net/gh/$1/$2@$3/$4'
+  );
+  // Handle: https://raw.githubusercontent.com/OWNER/REPO/BRANCH/PATH
+  url = url.replace(
+    /^https?:\/\/raw\.githubusercontent\.com\/([^\/]+)\/([^\/]+)\/([^\/]+)\/(.+)$/,
+    'https://testingcf.jsdelivr.net/gh/$1/$2@$3/$4'
+  );
+  return url;
+}
+for (const rs of config.route.rule_set) {
+  rs.url = ruleSetUrlCDN(rs.url);
+}
+
 // ---- Helpers ----
 
 function ruleSetEntry(tag, url) {
@@ -50,20 +73,20 @@ function findRuleIndex(cfg, matchTags) {
 // ---- Repcz China rule sets ----
 
 const REPCZ_RULES = [
-  ruleSetEntry('repcz-cn-domain', 'https://raw.githubusercontent.com/Repcz/Tool/X/sing-box/Rules/ChinaDomain.srs'),
-  ruleSetEntry('repcz-cn-ip', 'https://raw.githubusercontent.com/Repcz/Tool/X/sing-box/Rules/ChinaIP.srs'),
-  ruleSetEntry('repcz-ads-cn', 'https://raw.githubusercontent.com/Repcz/Tool/X/sing-box/Rules/Ads_EasyListChina.srs'),
+  ruleSetEntry('repcz-cn-domain', 'https://testingcf.jsdelivr.net/gh/Repcz/Tool@X/sing-box/Rules/ChinaDomain.srs'),
+  ruleSetEntry('repcz-cn-ip', 'https://testingcf.jsdelivr.net/gh/Repcz/Tool@X/sing-box/Rules/ChinaIP.srs'),
+  ruleSetEntry('repcz-ads-cn', 'https://testingcf.jsdelivr.net/gh/Repcz/Tool@X/sing-box/Rules/Ads_EasyListChina.srs'),
 ];
 
 const MEDIA_RULES = [
-  ruleSetEntry('netflix', 'https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/netflix.srs'),
-  ruleSetEntry('disney', 'https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/disney.srs'),
-  ruleSetEntry('primevideo', 'https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/primevideo.srs'),
-  ruleSetEntry('hulu', 'https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/hulu.srs'),
-  ruleSetEntry('hbo', 'https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/hbo.srs'),
-  ruleSetEntry('spotify', 'https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/spotify.srs'),
-  ruleSetEntry('bbc', 'https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/bbc.srs'),
-  ruleSetEntry('bilibili', 'https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/bilibili.srs'),
+  ruleSetEntry('netflix', 'https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/netflix.srs'),
+  ruleSetEntry('disney', 'https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/disney.srs'),
+  ruleSetEntry('primevideo', 'https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/primevideo.srs'),
+  ruleSetEntry('hulu', 'https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/hulu.srs'),
+  ruleSetEntry('hbo', 'https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/hbo.srs'),
+  ruleSetEntry('spotify', 'https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/spotify.srs'),
+  ruleSetEntry('bbc', 'https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/bbc.srs'),
+  ruleSetEntry('bilibili', 'https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/bilibili.srs'),
 ];
 
 const MEDIA_ROUTE_RULES = [
