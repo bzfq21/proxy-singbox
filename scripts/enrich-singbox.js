@@ -148,9 +148,6 @@ function applyBaseOptimizations(cfg) {
       cfg.route.rules.splice(dnsIdx + 1, 0, { ip_is_private: true, outbound: 'direct' });
     }
   }
-  if (!cfg.platform) {
-    cfg.platform = { http_proxy: { enabled: false } };
-  }
   for (const ob of cfg.outbounds) {
     if (['trojan', 'shadowsocks'].includes(ob.type) && ob.tcp_fast_open === undefined) {
       ob.tcp_fast_open = true;
@@ -158,6 +155,8 @@ function applyBaseOptimizations(cfg) {
   }
   // urltest does not support connect_timeout (sing-box rejects unknown fields)
   cfg.log = { level: 'warn' };
+  // platform is not supported in all sing-box versions; remove to avoid unknown field error
+  delete cfg.platform;
 }
 applyBaseOptimizations(config);
 // cache_file removed from all variants — old clients (pre-1.8) reject it

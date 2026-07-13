@@ -1981,10 +1981,5 @@
   "ntp": {
     "enabled": true,
     "server": "time.cloudflare.com"
-  },
-  "platform": {
-    "http_proxy": {
-      "enabled": false
-    }
   }
 }
