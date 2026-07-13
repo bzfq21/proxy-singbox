@@ -25,7 +25,8 @@
         "server": "local"
       }
     ],
-    "final": "remote"
+    "final": "remote",
+    "independent_cache": true
   },
   "inbounds": [
     {
@@ -227,6 +228,9 @@
       "obfs": {
         "type": "salamander",
         "password": "eNM/NfxTsBqQIKcN0ezARS1z0f5mIxRd9GSwhVsyJlo="
+      },
+      "tls": {
+        "enabled": true
       }
     },
     {
@@ -238,6 +242,9 @@
       "obfs": {
         "type": "salamander",
         "password": "eNM/NfxTsBqQIKcN0ezARS1z0f5mIxRd9GSwhVsyJlo="
+      },
+      "tls": {
+        "enabled": true
       }
     },
     {
@@ -256,6 +263,9 @@
       "obfs": {
         "type": "salamander",
         "password": "7e3ea7dfee4694e5e0e73383"
+      },
+      "tls": {
+        "enabled": true
       }
     },
     {

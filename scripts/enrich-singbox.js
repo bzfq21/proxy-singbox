@@ -11,6 +11,13 @@ if (config.independent_cache !== undefined) {
   delete config.independent_cache;
 }
 
+// Fix hysteria2 outbounds: tls.enabled required in sing-box 1.12+
+for (const ob of config.outbounds) {
+  if (ob.type === 'hysteria2' && !ob.tls) {
+    ob.tls = { enabled: true };
+  }
+}
+
 // ---- Helpers ----
 
 function ruleSetEntry(tag, url) {
