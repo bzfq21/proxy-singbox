@@ -59,8 +59,11 @@ sing-box run
 
 ```
 curl 上游 PuddinCat proxies.yaml  ─┐
-                                   ├→ subbridge build → node enrich-singbox.js → git push
-curl 免费池 Ruk1ng001/freeSub ────┘
+                                   ├→ subbridge build → node enrich-singbox.js → JSON校验 → git push
+curl 免费池(多源链) ──────────────┘
+     ├ Ruk1ng001/freeSub (主)
+     ├ ermaozi/get_subscribe (备)
+     └ mfuu/v2ray (备)
 ```
 
 构建失败时（如免费源宕机）自动降级为仅用上游源。
@@ -71,12 +74,14 @@ curl 免费池 Ruk1ng001/freeSub ────┘
 |----|------|--------|
 | [PuddinCat/BestClash](https://github.com/PuddinCat/BestClash) | trojan / hysteria2 / shadowsocks | ~16 |
 | [Ruk1ng001/freeSub](https://github.com/Ruk1ng001/freeSub) | vless / vmess / trojan / ss / socks / hysteria2 | ~109 |
-| **合计** | | **~125** |
+| [ermaozi/get_subscribe](https://github.com/ermaozi/get_subscribe) | trojan / vmess / ss | ~20 |
+| [mfuu/v2ray](https://github.com/mfuu/v2ray) | vmess / trojan / ss | ~27 |
+| **合计** | | **~172**（含重叠） |
 
 ## 特性
 
 - ✅ **全自动构建**（SubBridge + enrich-singbox.js 后处理）
-- ✅ **双节点源融合**（上游 ~16 + 免费池 ~109 = ~125 节点）
+- ✅ **多节点源融合**（上游 ~16 + 免费池多源链 ~156 = ~172 节点，自动 fallback）
 - ✅ **节点 TLS 优化**（UTLS Chrome 指纹、hysteria2 tls.enabled、tcp_fast_open）
 - ✅ **国内直连 + 广告拦截**（MetaCubeX / Repcz 规则集，CDN 加速拉取）
 - ✅ **流媒体版权地区路由**（Netflix / Disney / BBC / Bilibili 等）
@@ -87,7 +92,9 @@ curl 免费池 Ruk1ng001/freeSub ────┘
 ## 鸣谢
 
 - [PuddinCat/BestClash](https://github.com/PuddinCat/BestClash) — 上游 Clash 订阅源
-- [Ruk1ng001/freeSub](https://github.com/Ruk1ng001/freeSub) — 免费节点池
+- [Ruk1ng001/freeSub](https://github.com/Ruk1ng001/freeSub) — 免费节点池（主）
+- [ermaozi/get_subscribe](https://github.com/ermaozi/get_subscribe) — 免费节点池（备）
+- [mfuu/v2ray](https://github.com/mfuu/v2ray) — 免费节点池（备）
 - [zzf2333/SubBridge](https://github.com/zzf2333/SubBridge) — Clash → sing-box 转换工具
 - [MetaCubeX/meta-rules-dat](https://github.com/MetaCubeX/meta-rules-dat) — 通用规则集
 - [Repcz/Tool](https://github.com/Repcz/Tool) — 国内增强规则集

@@ -27,21 +27,36 @@ jobs:
 
       - name: Fetch extra free node sources
         run: |
-          curl -sL --connect-timeout 10 -o /tmp/extra.yaml \
-            "https://raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash.yaml" || \
-            echo "EXTRA_FAILED=true" >> $GITHUB_ENV
+          # Source 1: Ruk1ng001 (primary, ~109 nodes mixed protocols)
+          curl -sL --connect-timeout 10 -o /tmp/extra1.yaml \
+            "https://raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash.yaml"
+          # Source 2: ermaozi (fallback, ~20 stable nodes)
+          curl -sL --connect-timeout 10 -o /tmp/extra2.yaml \
+            "https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/clash.yml"
+          # Source 3: mfuu (fallback, ~27 nodes)
+          curl -sL --connect-timeout 10 -o /tmp/extra3.yaml \
+            "https://raw.githubusercontent.com/mfuu/v2ray/master/clash.yaml"
 
       - name: Build base sing-box config
         run: |
-          if [ "$EXTRA_FAILED" != "true" ] && [ -s /tmp/extra.yaml ]; then
-            subbridge build -i /tmp/proxies.yaml -i /tmp/extra.yaml -o singbox-config.json
-          else
-            echo "⚠️ extra.yaml unavailable, building with only proxies.yaml"
-            subbridge build -i /tmp/proxies.yaml -o singbox-config.json
-          fi
+          INPUTS="-i /tmp/proxies.yaml"
+          for src in extra1 extra2 extra3; do
+            if [ -s "/tmp/$src.yaml" ]; then
+              INPUTS="$INPUTS -i /tmp/$src.yaml"
+              echo "➕ $src.yaml available"
+            fi
+          done
+          subbridge build $INPUTS -o singbox-config.json
 
-      - name: Enrich configs (cn + geo versions)
+      - name: Enrich configs (cn + geo + pro versions)
         run: node scripts/enrich-singbox.js
+
+      - name: Validate generated configs
+        run: |
+          for f in singbox-config*.json; do
+            node -e "JSON.parse(require('fs').readFileSync('$f','utf8'))" || exit 1
+            echo "✅ $f valid"
+          done
 
       - name: Commit and push
         run: |
