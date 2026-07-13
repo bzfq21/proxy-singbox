@@ -15,7 +15,55 @@
 | 地区分流版 | `https://raw.githubusercontent.com/bzfq21/BestClash/refs/heads/main/singbox-config-geo.json` | 增强版 + 流媒体按版权地区路由 |
 | 职业版 | `https://raw.githubusercontent.com/bzfq21/BestClash/refs/heads/main/singbox-config-geo-pro.json` | 地区分流版 + FakeIP + Clash API |
 
-详细的版本差异与使用方法见 [SINGBOX.md](SINGBOX.md)。
+### 版本差异
+
+| 特性 | 基础版 | 国内增强版 | 地区分流版 | 职业版 |
+|------|--------|------------|------------|--------|
+| 国内直连（geosite-cn / geoip-cn） | ✅ | ✅ | ✅ | ✅ |
+| 广告拦截（geosite-ads） | ✅ | ✅ | ✅ | ✅ |
+| Repcz 国内增强规则集 | — | ✅ | ✅ | ✅ |
+| Netflix / Disney / BBC 等媒体分流 | — | — | ✅ | ✅ |
+| FakeIP（减少 DNS 泄漏） | — | — | — | ✅ |
+| Clash API（:9090 仪表盘） | — | — | — | ✅ |
+| strict_route（防路由环路） | — | — | — | ✅ |
+| DNS block server（广告零响应） | — | — | — | ✅ |
+
+### 使用方法
+
+**命令行 sing-box（原生）**
+
+```bash
+# 例：用地区分流版
+cp singbox-config-geo.json ~/.config/sing-box/config.json
+sing-box run
+```
+
+**GUI 客户端（NekoBox / sing-box for Android / SFI / Stash 等）**
+
+- **本地导入**：从仓库下载 `singbox-config-*.json` 后，在客户端选择「从文件加载」。
+- **订阅链接**：将上面的订阅地址填入客户端订阅设置（任一版本）。
+
+**验证**
+
+启动后查看日志：四版均为 **1.12+ 格式**，正常应**无 `legacy dns` 警告**；若出现，说明内核过旧需升级。
+
+### 注意事项
+
+- 免费节点来自公共订阅池，**稳定性不保证**，建议配合 `urltest` 自动测速使用。
+- 四版 `route.rule_set` 的 `.srs` 规则集从 **jsdelivr CDN** 拉取（`download_detour: "direct"`），客户端需能访问 CDN。
+- 若不需要免费池，可自行 `fork` 后删除 workflow 中的 `Fetch extra free node sources` 步骤。
+
+### 自动构建
+
+每 30 分钟通过 GitHub Actions 自动执行：
+
+```
+curl 上游 PuddinCat proxies.yaml  ─┐
+                                   ├→ subbridge build → node enrich-singbox.js → git push
+curl 免费池 Ruk1ng001/freeSub ────┘
+```
+
+构建失败时（如免费源宕机）自动降级为仅用上游源。
 
 ## 节点来源
 
@@ -27,17 +75,14 @@
 
 ## 特性
 
-- ✅ 全自动构建（SubBridge + 后处理脚本）
-- ✅ 节点 TLS 优化（UTLS Chrome 指纹、hysteria2 tls.enabled）
-- ✅ 国内直连 + 广告拦截（MetaCubeX / Repcz 规则集，CDN 加速拉取）
-- ✅ 流媒体版权地区路由（Netflix / Disney / BBC / Bilibili 等）
-- ✅ DNS 优选（prefer_ipv4 + 备选 DNS + NTP 时间同步）
-- ✅ cache_file 持久化（节点选择、FakeIP 映射重启不丢）
-- ✅ tcp_fast_open 加速 TCP 握手
-
-## 用量（sing-box GUI 客户端）
-
-将上述订阅地址填入 sing-box 客户端（NekoBox / sing-box for Android / SFI / Stash 等）即可。
+- ✅ **全自动构建**（SubBridge + enrich-singbox.js 后处理）
+- ✅ **双节点源融合**（上游 ~16 + 免费池 ~109 = ~125 节点）
+- ✅ **节点 TLS 优化**（UTLS Chrome 指纹、hysteria2 tls.enabled、tcp_fast_open）
+- ✅ **国内直连 + 广告拦截**（MetaCubeX / Repcz 规则集，CDN 加速拉取）
+- ✅ **流媒体版权地区路由**（Netflix / Disney / BBC / Bilibili 等）
+- ✅ **DNS 优选**（prefer_ipv4 + 备选 DNS + NTP 时间同步 + FakeIP[pro]）
+- ✅ **cache_file 持久化**（节点选择 / FakeIP 映射重启不丢）
+- ✅ **日志安静**（`warn` 级别，不刷屏）
 
 ## 鸣谢
 
