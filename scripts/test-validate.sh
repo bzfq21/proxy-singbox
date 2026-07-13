@@ -65,7 +65,7 @@ if [ -f "$PRO" ]; then
       ['fakeip server has inet4_range',  c.dns?.servers?.some(s => s.type==='fakeip' && s.inet4_range==='198.18.0.0/15')],
       ['fakeip server has inet6_range',  c.dns?.servers?.some(s => s.type==='fakeip' && s.inet6_range==='fc00::/18')],
       ['no top-level dns.fakeip',        c.dns?.fakeip === undefined],
-      ['cache_id is pro',                c.cache_file?.cache_id === 'pro'],
+      ['no cache_file (compat)',          c.cache_file === undefined],
       ['clash_api enabled',              !!c.experimental?.clash_api],
     ];
     const failed = checks.filter(([k,v]) => !v).map(([k]) => k);
@@ -73,7 +73,7 @@ if [ -f "$PRO" ]; then
     console.log('ALL OK');
   " && ok "$PRO: all checks pass" || fail "$PRO: $(node -e "try {
     const c=JSON.parse(require('fs').readFileSync('$PRO','utf8'));
-    const checks=[['dns.final===fakeip',c.dns?.final==='fakeip'],['dns.independent_cache===true',c.dns?.independent_cache===true],['fakeip has inet4_range',c.dns?.servers?.some(s=>s.type==='fakeip'&&s.inet4_range==='198.18.0.0/15')],['fakeip has inet6_range',c.dns?.servers?.some(s=>s.type==='fakeip'&&s.inet6_range==='fc00::/18')],['no top-level dns.fakeip',c.dns?.fakeip===undefined],['cache_id=pro',c.cache_file?.cache_id==='pro'],['clash_api enabled',!!c.experimental?.clash_api]];
+    const checks=[['dns.final===fakeip',c.dns?.final==='fakeip'],['dns.independent_cache===true',c.dns?.independent_cache===true],['fakeip has inet4_range',c.dns?.servers?.some(s=>s.type==='fakeip'&&s.inet4_range==='198.18.0.0/15')],['fakeip has inet6_range',c.dns?.servers?.some(s=>s.type==='fakeip'&&s.inet6_range==='fc00::/18')],['no top-level dns.fakeip',c.dns?.fakeip===undefined],['no cache_file',c.cache_file===undefined],['clash_api enabled',!!c.experimental?.clash_api]];
     const failed=checks.filter(([k,v])=>!v).map(([k])=>k);
     console.log(failed.join(', '))
   } catch(e) {console.log('parse error')}")"

@@ -2002,11 +2002,6 @@
     "default_domain_resolver": "local",
     "final": "🚀 节点"
   },
-  "cache_file": {
-    "enabled": true,
-    "path": "cache.db",
-    "cache_id": "cn"
-  },
   "ntp": {
     "enabled": true,
     "server": "time.cloudflare.com"

@@ -86,7 +86,6 @@ curl 免费池(多源链) ──────────────┘
 - ✅ **国内直连 + 广告拦截**（MetaCubeX / Repcz 规则集，CDN 加速拉取）
 - ✅ **流媒体版权地区路由**（Netflix / Disney / BBC / Bilibili 等）
 - ✅ **DNS 优选**（prefer_ipv4 + 备选 DNS + NTP 时间同步 + FakeIP[pro]）
-- ✅ **cache_file 持久化**（节点选择 / FakeIP 映射重启不丢）
 - ✅ **日志安静**（`warn` 级别，不刷屏）
 
 ## 鸣谢

@@ -160,6 +160,9 @@ function applyBaseOptimizations(cfg) {
   cfg.log = { level: 'warn' };
 }
 applyBaseOptimizations(config);
+// cache_file removed from all variants — old clients (pre-1.8) reject it
+// and its absence has no functional impact.
+delete config.cache_file;
 
 writeVariant(config, 'base');
 
