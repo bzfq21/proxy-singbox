@@ -27,11 +27,18 @@ jobs:
 
       - name: Fetch extra free node sources
         run: |
-          curl -sL -o /tmp/extra.yaml \
-            "https://raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash.yaml"
+          curl -sL --connect-timeout 10 -o /tmp/extra.yaml \
+            "https://raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash.yaml" || \
+            echo "EXTRA_FAILED=true" >> $GITHUB_ENV
 
       - name: Build base sing-box config
-        run: subbridge build -i /tmp/proxies.yaml -i /tmp/extra.yaml -o singbox-config.json
+        run: |
+          if [ "$EXTRA_FAILED" != "true" ] && [ -s /tmp/extra.yaml ]; then
+            subbridge build -i /tmp/proxies.yaml -i /tmp/extra.yaml -o singbox-config.json
+          else
+            echo "⚠️ extra.yaml unavailable, building with only proxies.yaml"
+            subbridge build -i /tmp/proxies.yaml -o singbox-config.json
+          fi
 
       - name: Enrich configs (cn + geo versions)
         run: node scripts/enrich-singbox.js
