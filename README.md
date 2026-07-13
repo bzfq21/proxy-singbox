@@ -14,19 +14,22 @@
 | 国内增强版 | 基础版 + Repcz 国内规则集 | `https://testingcf.jsdelivr.net/gh/bzfq21/proxy-singbox@main/singbox-config-cn.json` | `https://raw.githubusercontent.com/bzfq21/proxy-singbox/refs/heads/main/singbox-config-cn.json` |
 | 地区分流版 | 增强版 + 流媒体版权地区路由 | `https://testingcf.jsdelivr.net/gh/bzfq21/proxy-singbox@main/singbox-config-geo.json` | `https://raw.githubusercontent.com/bzfq21/proxy-singbox/refs/heads/main/singbox-config-geo.json` |
 | 职业版 | 地区分流版 + FakeIP + Clash API | `https://testingcf.jsdelivr.net/gh/bzfq21/proxy-singbox@main/singbox-config-geo-pro.json` | `https://raw.githubusercontent.com/bzfq21/proxy-singbox/refs/heads/main/singbox-config-geo-pro.json` |
+| 轻量版 | 仅上游节点(~16) + 本地 DNS，最快启动 | `https://testingcf.jsdelivr.net/gh/bzfq21/proxy-singbox@main/singbox-config-lite.json` | `https://raw.githubusercontent.com/bzfq21/proxy-singbox/refs/heads/main/singbox-config-lite.json` |
 
 ### 版本差异
 
-| 特性 | 基础版 | 国内增强版 | 地区分流版 | 职业版 |
-|------|--------|------------|------------|--------|
-| 国内直连（geosite-cn / geoip-cn） | ✅ | ✅ | ✅ | ✅ |
-| 广告拦截（geosite-ads） | ✅ | ✅ | ✅ | ✅ |
-| Repcz 国内增强规则集 | — | ✅ | ✅ | ✅ |
-| Netflix / Disney / BBC 等媒体分流 | — | — | ✅ | ✅ |
-| FakeIP（减少 DNS 泄漏） | — | — | — | ✅ |
-| Clash API（:9090 仪表盘） | — | — | — | ✅ |
-| strict_route（防路由环路） | ✅ | ✅ | ✅ | ✅ |
-| DNS block server（广告零响应） | — | — | — | ✅ |
+| 特性 | 基础版 | 国内增强版 | 地区分流版 | 职业版 | 轻量版 |
+|------|--------|------------|------------|--------|--------|
+| 国内直连（geosite-cn / geoip-cn） | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 广告拦截（geosite-ads） | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Repcz 国内增强规则集 | — | ✅ | ✅ | ✅ | — |
+| Netflix / Disney / BBC 等媒体分流 | — | — | ✅ | ✅ | — |
+| FakeIP（减少 DNS 泄漏） | — | — | — | ✅ | — |
+| Clash API（:9090 仪表盘） | — | — | — | ✅ | — |
+| strict_route（防路由环路） | ✅ | ✅ | ✅ | ✅ | ✅ |
+| DNS block server（广告零响应） | — | — | — | ✅ | — |
+| 本地 DNS（无远程 TLS 查询） | — | — | — | — | ✅ |
+| 仅上游节点(~16，启动最快) | — | — | — | — | ✅ |
 
 ### 使用方法
 
@@ -52,6 +55,7 @@ sing-box run
 - 国内用户请使用「国内镜像（jsdelivr CDN）」列地址；`raw.githubusercontent.com` 在国内通常不可达。
 - 免费节点来自公共订阅池，**稳定性不保证**，建议配合 `urltest` 自动测速使用。
 - 若不需要免费池，可自行 `fork` 后删除 workflow 中的 `Fetch extra free node sources` 步骤。
+- **轻量版**（`singbox-config-lite.json`）：仅保留上游 PuddinCat ~16 节点、DNS 走本地、规则集最小化，启动与首包延迟最低，适合日常浏览 / 流媒体。牺牲了免费池节点广度与媒体分流。
 
 ### 自动构建
 
