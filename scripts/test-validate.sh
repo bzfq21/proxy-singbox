@@ -18,7 +18,7 @@ node scripts/enrich-singbox.js && GENERATED=1 && ok "enrich-singbox.js exited 0"
 
 # ---- 2. JSON syntax ----
 echo "--- 2. JSON syntax ---"
-CONFIGS=(singbox-config.json singbox-config-cn.json singbox-config-geo.json singbox-config-geo-pro.json)
+CONFIGS=(singbox-config.json singbox-config-cn.json singbox-config-geo.json singbox-config-geo-pro.json singbox-config-lite.json)
 for f in "${CONFIGS[@]}"; do
   if [ -f "$f" ]; then
     node -e "JSON.parse(require('fs').readFileSync('$f','utf8'))" && ok "$f: valid JSON" || fail "$f: invalid JSON"
@@ -79,8 +79,35 @@ if [ -f "$PRO" ]; then
   } catch(e) {console.log('parse error')}")"
 fi
 
-# ---- 5. Common invariants ----
-echo "--- 5. Invariants ---"
+# ---- 5. Lite-specific checks ----
+echo "--- 5. Lite checks ---"
+LITE="singbox-config-lite.json"
+if [ -f "$LITE" ]; then
+  node -e "
+    const c = JSON.parse(require('fs').readFileSync('$LITE','utf8'));
+    const tags = new Set(c.outbounds.map(o => o.tag));
+    const freePool = c.outbounds.filter(o => o.tag && o.tag.includes('github.com')).length;
+    const dangling = c.outbounds.reduce((acc, ob) => {
+      if (Array.isArray(ob.outbounds)) {
+        for (const t of ob.outbounds) if (!tags.has(t)) acc.push(ob.tag + '->' + t);
+      }
+      return acc;
+    }, []).length;
+    const checks = [
+      ['no free-pool nodes',         freePool === 0],
+      ['no dangling group refs',     dangling === 0],
+      ['dns has no tls server',      (c.dns?.servers || []).every(s => s.type !== 'tls')],
+      ['dns.final === local',        c.dns?.final === 'local'],
+      ['rule_set minimal (<=3)',     (c.route?.rule_set || []).length <= 3],
+    ];
+    const failed = checks.filter(([k,v]) => !v).map(([k]) => k);
+    if (failed.length) { console.log('FAIL:', failed.join(', ')); process.exit(1); }
+    console.log('ALL OK');
+  " && ok "$LITE: lite checks pass" || fail "$LITE: lite checks failed"
+fi
+
+# ---- 6. Common invariants ----
+echo "--- 6. Invariants ---"
 for f in "${CONFIGS[@]}"; do
   if [ ! -f "$f" ]; then continue; fi
   node -e "

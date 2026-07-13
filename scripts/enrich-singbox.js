@@ -80,11 +80,49 @@ function setCacheId(cfg, id) {
 
 function writeVariant(cfg, name) {
   setCacheId(cfg, name);
-  const FILE_NAMES = { base: 'singbox-config.json', cn: 'singbox-config-cn.json', geo: 'singbox-config-geo.json', pro: 'singbox-config-geo-pro.json' };
+  const FILE_NAMES = {
+    base: 'singbox-config.json',
+    cn: 'singbox-config-cn.json',
+    geo: 'singbox-config-geo.json',
+    pro: 'singbox-config-geo-pro.json',
+    lite: 'singbox-config-lite.json',
+  };
   const file = FILE_NAMES[name];
   if (!file) throw new Error(`Unknown variant: ${name}`);
   fs.writeFileSync(path.join(OUT_DIR, file), JSON.stringify(cfg, null, 2));
   console.log(`✅ ${name}: ${file}`);
+}
+
+// ---- Lite helpers ----
+
+// Keep only the upstream PuddinCat nodes; drop free-pool sources (Ruk1ng001,
+// ermaozi, mfuu). This shrinks urltest scope ~10x so the first-connection
+// latency probe is near-instant.
+const UPSTREAM_RE = /puddincat/;
+const NON_PROXY_TYPES = new Set(['selector', 'urltest', 'direct', 'block', 'dns', 'tun']);
+
+function filterUpstreamOnly(outbounds) {
+  const kept = outbounds.filter(ob =>
+    NON_PROXY_TYPES.has(ob.type) || (ob.tag && UPSTREAM_RE.test(ob.tag))
+  );
+  const keptTags = new Set(kept.map(o => o.tag));
+  // Narrow group membership lists to tags that still exist.
+  for (const ob of kept) {
+    if (Array.isArray(ob.outbounds)) {
+      ob.outbounds = ob.outbounds.filter(t => keptTags.has(t));
+    }
+  }
+  return kept;
+}
+
+// Local-only DNS: remove any remote TLS resolver and point final at local.
+// Avoids the 200-500ms proxy detour on every overseas DNS query.
+function localizeDns(cfg) {
+  if (!cfg.dns) return;
+  cfg.dns.servers = (cfg.dns.servers || []).filter(s => s.type !== 'tls');
+  if (cfg.dns.final && cfg.dns.final !== 'local') {
+    cfg.dns.final = 'local';
+  }
 }
 
 // ---- Repcz China rule sets ----
@@ -253,3 +291,13 @@ pro.experimental = {
 };
 
 writeVariant(pro, 'pro');
+
+// ---- Build lite version ----
+// Minimal footprint: upstream nodes only (~16), local DNS, no media/Repcz
+// rule sets. For users who want speed over coverage.
+
+const lite = JSON.parse(JSON.stringify(config));
+lite.outbounds = filterUpstreamOnly(lite.outbounds);
+localizeDns(lite);
+
+writeVariant(lite, 'lite');
