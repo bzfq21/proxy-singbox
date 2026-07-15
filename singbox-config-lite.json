@@ -132,6 +132,19 @@
     },
     {
       "type": "selector",
+      "tag": "🇸🇬 新加坡",
+      "outbounds": [
+        "🇸🇬 新加坡 - 自动"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "🇸🇬 新加坡 - 自动",
+      "outbounds": [],
+      "interval": "5m"
+    },
+    {
+      "type": "selector",
       "tag": "🇰🇷 韩国",
       "outbounds": [
         "🇰🇷 韩国 - 自动",
@@ -248,19 +261,6 @@
         "in|3177|puddincat07@Telegram",
         "in|f00c|puddincat07@Telegram"
       ],
-      "interval": "5m"
-    },
-    {
-      "type": "selector",
-      "tag": "🇮🇩 印度尼西亚",
-      "outbounds": [
-        "🇮🇩 印度尼西亚 - 自动"
-      ]
-    },
-    {
-      "type": "urltest",
-      "tag": "🇮🇩 印度尼西亚 - 自动",
-      "outbounds": [],
       "interval": "5m"
     },
     {
