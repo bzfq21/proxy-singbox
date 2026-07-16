@@ -182,6 +182,19 @@
     },
     {
       "type": "selector",
+      "tag": "🇫🇷 法国",
+      "outbounds": [
+        "🇫🇷 法国 - 自动"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "🇫🇷 法国 - 自动",
+      "outbounds": [],
+      "interval": "5m"
+    },
+    {
+      "type": "selector",
       "tag": "🇷🇺 俄罗斯",
       "outbounds": [
         "🇷🇺 俄罗斯 - 自动"
