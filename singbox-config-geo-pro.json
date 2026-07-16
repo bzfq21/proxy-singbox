@@ -70,18 +70,18 @@
         "xx|e2b9|puddincat07@Telegram",
         "xx|f463|puddincat07@Telegram",
         "us|5c3a|puddincat07@Telegram",
-        "de|55a3|puddincat07@Telegram",
-        "us|ac48|puddincat07@Telegram",
-        "xx|2c29|puddincat07@Telegram",
-        "xx|6307|puddincat07@Telegram",
-        "xx|3653|puddincat07@Telegram",
-        "gt|56fa|puddincat07@Telegram",
-        "xx|7d7e|puddincat07@Telegram",
-        "it|eb24|puddincat07@Telegram",
-        "xx|071d|puddincat07@Telegram",
-        "xx|f001|puddincat07@Telegram",
-        "xx|398e|puddincat07@Telegram",
-        "de|27a4|puddincat07@Telegram",
+        "xx|8151|puddincat07@Telegram",
+        "xx|bc3b|puddincat07@Telegram",
+        "ie|c363|puddincat07@Telegram",
+        "cf|e254|puddincat07@Telegram",
+        "xx|61a3|puddincat07@Telegram",
+        "fr|b486|puddincat07@Telegram",
+        "cf|0db7|puddincat07@Telegram",
+        "xx|56e7|puddincat07@Telegram",
+        "xx|a098|puddincat07@Telegram",
+        "ir|bd3d|puddincat07@Telegram",
+        "xx|114e|puddincat07@Telegram",
+        "es|42cf|puddincat07@Telegram",
         "🟠🇸🇬[🎬🤖📺🎭]_github.com/Ruk1ng001_6724d58b",
         "🔴🇳🇱[🤖📺🎭🎪]_github.com/Ruk1ng001_1543c279",
         "🟢🇺🇸[🎬🤖📺🎭]_github.com/Ruk1ng001_a88e970f",
@@ -216,18 +216,18 @@
         "xx|e2b9|puddincat07@Telegram",
         "xx|f463|puddincat07@Telegram",
         "us|5c3a|puddincat07@Telegram",
-        "de|55a3|puddincat07@Telegram",
-        "us|ac48|puddincat07@Telegram",
-        "xx|2c29|puddincat07@Telegram",
-        "xx|6307|puddincat07@Telegram",
-        "xx|3653|puddincat07@Telegram",
-        "gt|56fa|puddincat07@Telegram",
-        "xx|7d7e|puddincat07@Telegram",
-        "it|eb24|puddincat07@Telegram",
-        "xx|071d|puddincat07@Telegram",
-        "xx|f001|puddincat07@Telegram",
-        "xx|398e|puddincat07@Telegram",
-        "de|27a4|puddincat07@Telegram",
+        "xx|8151|puddincat07@Telegram",
+        "xx|bc3b|puddincat07@Telegram",
+        "ie|c363|puddincat07@Telegram",
+        "cf|e254|puddincat07@Telegram",
+        "xx|61a3|puddincat07@Telegram",
+        "fr|b486|puddincat07@Telegram",
+        "cf|0db7|puddincat07@Telegram",
+        "xx|56e7|puddincat07@Telegram",
+        "xx|a098|puddincat07@Telegram",
+        "ir|bd3d|puddincat07@Telegram",
+        "xx|114e|puddincat07@Telegram",
+        "es|42cf|puddincat07@Telegram",
         "🟠🇸🇬[🎬🤖📺🎭]_github.com/Ruk1ng001_6724d58b",
         "🔴🇳🇱[🤖📺🎭🎪]_github.com/Ruk1ng001_1543c279",
         "🟢🇺🇸[🎬🤖📺🎭]_github.com/Ruk1ng001_a88e970f",
@@ -401,7 +401,6 @@
         "🇺🇸 美国 - 自动",
         "us|1cb5|puddincat07@Telegram",
         "us|5c3a|puddincat07@Telegram",
-        "us|ac48|puddincat07@Telegram",
         "🇺🇸_US_美国",
         "🇺🇸_US_美国->🇫🇷_FR_法国",
         "🇨🇳_CN_中国->🇺🇸_US_美国",
@@ -415,7 +414,6 @@
       "outbounds": [
         "us|1cb5|puddincat07@Telegram",
         "us|5c3a|puddincat07@Telegram",
-        "us|ac48|puddincat07@Telegram",
         "🇺🇸_US_美国",
         "🇺🇸_US_美国->🇫🇷_FR_法国",
         "🇨🇳_CN_中国->🇺🇸_US_美国",
@@ -429,8 +427,6 @@
       "tag": "🇩🇪 德国",
       "outbounds": [
         "🇩🇪 德国 - 自动",
-        "de|55a3|puddincat07@Telegram",
-        "de|27a4|puddincat07@Telegram",
         "🇩🇪_DE_德国",
         "🇩🇪_DE_德国_1",
         "🇮🇷_IR_伊朗->🇩🇪_DE_德国",
@@ -442,8 +438,6 @@
       "type": "urltest",
       "tag": "🇩🇪 德国 - 自动",
       "outbounds": [
-        "de|55a3|puddincat07@Telegram",
-        "de|27a4|puddincat07@Telegram",
         "🇩🇪_DE_德国",
         "🇩🇪_DE_德国_1",
         "🇮🇷_IR_伊朗->🇩🇪_DE_德国",
@@ -457,6 +451,7 @@
       "tag": "🇫🇷 法国",
       "outbounds": [
         "🇫🇷 法国 - 自动",
+        "fr|b486|puddincat07@Telegram",
         "🇨🇳_CN_中国->🇫🇷_FR_法国"
       ]
     },
@@ -464,6 +459,7 @@
       "type": "urltest",
       "tag": "🇫🇷 法国 - 自动",
       "outbounds": [
+        "fr|b486|puddincat07@Telegram",
         "🇨🇳_CN_中国->🇫🇷_FR_法国"
       ],
       "interval": "5m"
@@ -536,78 +532,99 @@
       "tcp_fast_open": true
     },
     {
+      "type": "vmess",
+      "tag": "xx|8151|puddincat07@Telegram",
+      "server": "v10.hdacd.com",
+      "server_port": 30807,
+      "uuid": "cbb3f877-d1fb-344c-87a9-d153bffd5484",
+      "security": "auto",
+      "alter_id": 2
+    },
+    {
+      "type": "trojan",
+      "tag": "xx|bc3b|puddincat07@Telegram",
+      "server": "growing-oyster.rooster465.autos",
+      "server_port": 443,
+      "password": "XG59623478",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "tcp_fast_open": true
+    },
+    {
+      "type": "trojan",
+      "tag": "ie|c363|puddincat07@Telegram",
+      "server": "3.249.67.252",
+      "server_port": 443,
+      "password": "XG59623478",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "tcp_fast_open": true
+    },
+    {
+      "type": "trojan",
+      "tag": "cf|e254|puddincat07@Telegram",
+      "server": "188.164.248.122",
+      "server_port": 443,
+      "password": "c206d543-023d-46cc-9d5a-1f0f2fc16323",
+      "transport": {
+        "type": "ws",
+        "path": "/in-pdr",
+        "headers": {
+          "Host": "space.byu.id.yxls.eu.cc"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "tcp_fast_open": true
+    },
+    {
+      "type": "trojan",
+      "tag": "xx|61a3|puddincat07@Telegram",
+      "server": "concise-buck.rooster465.autos",
+      "server_port": 443,
+      "password": "XG59623478",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "tcp_fast_open": true
+    },
+    {
       "type": "shadowsocks",
-      "tag": "de|55a3|puddincat07@Telegram",
-      "server": "209.46.102.22",
-      "server_port": 8388,
+      "tag": "fr|b486|puddincat07@Telegram",
+      "server": "51.178.87.37",
+      "server_port": 810,
       "method": "chacha20-ietf-poly1305",
-      "password": "1hhrqrokj3ag",
+      "password": "G!yBwPWH3Vao",
       "tcp_fast_open": true
     },
     {
       "type": "trojan",
-      "tag": "us|ac48|puddincat07@Telegram",
-      "server": "208.103.161.101",
-      "server_port": 443,
-      "password": "humanity",
+      "tag": "cf|0db7|puddincat07@Telegram",
+      "server": "185.162.228.4",
+      "server_port": 80,
+      "password": "dGKXcHgs3P",
       "transport": {
         "type": "ws",
-        "path": "/assignment",
-        "headers": {
-          "Host": "www.creationlong.org"
-        }
-      },
-      "tls": {
-        "enabled": true,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "tcp_fast_open": true
-    },
-    {
-      "type": "trojan",
-      "tag": "xx|2c29|puddincat07@Telegram",
-      "server": "jpbgp.netvigor.cc",
-      "server_port": 19128,
-      "password": "OccIqeORGQwiNkwS",
-      "tls": {
-        "enabled": true,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "tcp_fast_open": true
-    },
-    {
-      "type": "trojan",
-      "tag": "xx|6307|puddincat07@Telegram",
-      "server": "uk-full.privateip.net",
-      "server_port": 443,
-      "password": "57afed5a-5a70-4a8b-bb40-4d81c26e65dd",
-      "tls": {
-        "enabled": true,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "tcp_fast_open": true
-    },
-    {
-      "type": "trojan",
-      "tag": "xx|3653|puddincat07@Telegram",
-      "server": "iranpoems.ir",
-      "server_port": 443,
-      "password": "Mitivpn",
-      "transport": {
-        "type": "ws",
-        "path": "/usa=mitivpn",
-        "headers": {
-          "Host": "www.gamingdll.ir"
-        }
+        "path": "%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252F%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252CTurk"
       },
       "tls": {
         "enabled": true,
@@ -620,43 +637,28 @@
     },
     {
       "type": "shadowsocks",
-      "tag": "gt|56fa|puddincat07@Telegram",
-      "server": "170.80.111.6",
-      "server_port": 989,
-      "method": "aes-256-cfb",
-      "password": "f8f7aCzcPKbsF8p3",
-      "tcp_fast_open": true
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "xx|7d7e|puddincat07@Telegram",
-      "server": "jp10.ktp.wtf",
+      "tag": "xx|56e7|puddincat07@Telegram",
+      "server": "jp02.ktp.wtf",
       "server_port": 24603,
       "method": "rc4-md5",
       "password": "dbEcUJ",
       "tcp_fast_open": true
     },
     {
-      "type": "trojan",
-      "tag": "it|eb24|puddincat07@Telegram",
-      "server": "95.164.46.235",
-      "server_port": 443,
-      "password": "c73406e2-1d3a-4724-a691-4d0b7f36cee9",
-      "tls": {
-        "enabled": true,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
+      "type": "shadowsocks",
+      "tag": "xx|a098|puddincat07@Telegram",
+      "server": "beromo.youxinye.com",
+      "server_port": 22002,
+      "method": "aes-128-gcm",
+      "password": "c44758e2-67a4-40b2-bbc8-4ca97861ea47",
       "tcp_fast_open": true
     },
     {
       "type": "trojan",
-      "tag": "xx|071d|puddincat07@Telegram",
-      "server": "ip0axv1bbsu02k7-us.1ytnode.com",
-      "server_port": 56353,
-      "password": "cd7239af-77ad-4628-a871-00acfa219f02",
+      "tag": "ir|bd3d|puddincat07@Telegram",
+      "server": "188.121.117.32",
+      "server_port": 443,
+      "password": "15cNx34bm8",
       "tls": {
         "enabled": true,
         "utls": {
@@ -668,35 +670,20 @@
     },
     {
       "type": "shadowsocks",
-      "tag": "xx|f001|puddincat07@Telegram",
-      "server": "p222.panda001.net",
-      "server_port": 51472,
-      "method": "aes-256-cfb",
-      "password": "qwerREWQ@@",
-      "tcp_fast_open": true
-    },
-    {
-      "type": "trojan",
-      "tag": "xx|398e|puddincat07@Telegram",
-      "server": "nearby-muskrat.rooster465.autos",
-      "server_port": 443,
-      "password": "OD90375861",
-      "tls": {
-        "enabled": true,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
+      "tag": "xx|114e|puddincat07@Telegram",
+      "server": "9s5g01.a3b5wy.xyz",
+      "server_port": 36020,
+      "method": "chacha20-ietf-poly1305",
+      "password": "3016be06-2f91-4b8f-9e6a-bd55f2c55610",
       "tcp_fast_open": true
     },
     {
       "type": "shadowsocks",
-      "tag": "de|27a4|puddincat07@Telegram",
-      "server": "63.180.254.10",
-      "server_port": 443,
+      "tag": "es|42cf|puddincat07@Telegram",
+      "server": "5.188.181.201",
+      "server_port": 9041,
       "method": "aes-256-cfb",
-      "password": "amazonskr05",
+      "password": "U6qnYRhfyDmn8sgn",
       "tcp_fast_open": true
     },
     {
