@@ -242,6 +242,19 @@
       "interval": "5m"
     },
     {
+      "type": "selector",
+      "tag": "🇦🇺 澳大利亚",
+      "outbounds": [
+        "🇦🇺 澳大利亚 - 自动"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "🇦🇺 澳大利亚 - 自动",
+      "outbounds": [],
+      "interval": "5m"
+    },
+    {
       "type": "hysteria2",
       "tag": "jp|69bf|puddincat07@Telegram",
       "server": "45.88.43.116",
