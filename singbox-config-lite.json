@@ -58,9 +58,9 @@
         "xx|8151|puddincat07@Telegram",
         "us|3055|puddincat07@Telegram",
         "se|599b|puddincat07@Telegram",
-        "us|c3bc|puddincat07@Telegram",
         "kr|9179|puddincat07@Telegram",
-        "gb|8507|puddincat07@Telegram"
+        "gb|8507|puddincat07@Telegram",
+        "us|c3bc|puddincat07@Telegram"
       ]
     },
     {
@@ -79,9 +79,9 @@
         "xx|8151|puddincat07@Telegram",
         "us|3055|puddincat07@Telegram",
         "se|599b|puddincat07@Telegram",
-        "us|c3bc|puddincat07@Telegram",
         "kr|9179|puddincat07@Telegram",
-        "gb|8507|puddincat07@Telegram"
+        "gb|8507|puddincat07@Telegram",
+        "us|c3bc|puddincat07@Telegram"
       ],
       "interval": "5m",
       "tolerance": 50
@@ -360,15 +360,6 @@
     },
     {
       "type": "shadowsocks",
-      "tag": "us|c3bc|puddincat07@Telegram",
-      "server": "193.42.38.209",
-      "server_port": 1080,
-      "method": "chacha20-ietf-poly1305",
-      "password": "XF0klw7870vXn3uQIxe19Q",
-      "tcp_fast_open": true
-    },
-    {
-      "type": "shadowsocks",
       "tag": "kr|9179|puddincat07@Telegram",
       "server": "27.255.82.134",
       "server_port": 2078,
@@ -383,6 +374,15 @@
       "server_port": 443,
       "method": "chacha20-ietf-poly1305",
       "password": "oZIoA69Q8yhcQV8ka3Pa3A",
+      "tcp_fast_open": true
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "us|c3bc|puddincat07@Telegram",
+      "server": "193.42.38.209",
+      "server_port": 1080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "XF0klw7870vXn3uQIxe19Q",
       "tcp_fast_open": true
     },
     {
