@@ -101,6 +101,19 @@
     },
     {
       "type": "selector",
+      "tag": "🇯🇵 日本",
+      "outbounds": [
+        "🇯🇵 日本 - 自动"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "🇯🇵 日本 - 自动",
+      "outbounds": [],
+      "interval": "5m"
+    },
+    {
+      "type": "selector",
       "tag": "🇺🇸 美国",
       "outbounds": [
         "🇺🇸 美国 - 自动",
