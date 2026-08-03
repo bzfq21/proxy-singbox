@@ -457,8 +457,8 @@
         "🇭🇰_HK_中国香港_5",
         "🇺🇸_US_美国",
         "🇷🇺_RU_俄罗斯",
-        "🏁RELAY-172.67.149.60-00",
-        "🏁RELAY-104.18.152.155-01",
+        "🏁RELAY-198.41.223.96-00",
+        "🏁RELAY-104.18.152.97-01",
         "🇩🇪DE-63.180.254.10-02",
         "🇭🇰HK-112.118.142.110-03",
         "🇭🇰HK-16.162.191.180-04",
@@ -473,20 +473,21 @@
         "🇭🇰HK-18.163.100.58-13",
         "🇭🇰HK-95.40.107.76-14",
         "🇭🇰HK-16.162.164.238-15",
-        "🏁RELAY-172.67.174.10-16",
-        "🏁RELAY-104.21.88.77-17",
+        "🏁RELAY-104.21.88.77-16",
+        "🏁RELAY-172.67.174.10-17",
         "🏁RELAY-104.16.148.5-18",
         "🇺🇸US-157.254.38.210-19",
-        "🇭🇰HK-8.210.108.58-20",
-        "🇺🇸US-157.254.38.210-21",
-        "🇭🇰HK-47.243.233.149-22",
-        "🇺🇸US-157.254.38.210-23",
-        "🇺🇸US-88.210.36.106-24",
-        "🇭🇰HK-47.76.102.39-25",
-        "🇭🇰HK-8.218.184.4-26",
-        "🇸🇬SG-47.129.65.118-27",
-        "🇭🇰HK-47.83.207.148-28",
-        "🇸🇬SG-47.129.65.118-29"
+        "🇭🇰HK-47.243.233.149-20",
+        "🇨🇳CN-61.171.92.202-21",
+        "🇭🇰HK-47.243.10.180-22",
+        "🇭🇰HK-47.76.197.72-23",
+        "🇭🇰HK-16.162.22.218-24",
+        "🇭🇰HK-47.83.207.148-25",
+        "🇺🇸US-157.254.38.210-26",
+        "🇨🇳CN-101.43.4.5-27",
+        "🇭🇰HK-47.239.208.160-28",
+        "🇳🇱NL-45.130.22.70-29",
+        "🇭🇰HK-43.100.32.12-30"
       ]
     },
     {
@@ -898,8 +899,8 @@
         "🇭🇰_HK_中国香港_5",
         "🇺🇸_US_美国",
         "🇷🇺_RU_俄罗斯",
-        "🏁RELAY-172.67.149.60-00",
-        "🏁RELAY-104.18.152.155-01",
+        "🏁RELAY-198.41.223.96-00",
+        "🏁RELAY-104.18.152.97-01",
         "🇩🇪DE-63.180.254.10-02",
         "🇭🇰HK-112.118.142.110-03",
         "🇭🇰HK-16.162.191.180-04",
@@ -914,20 +915,21 @@
         "🇭🇰HK-18.163.100.58-13",
         "🇭🇰HK-95.40.107.76-14",
         "🇭🇰HK-16.162.164.238-15",
-        "🏁RELAY-172.67.174.10-16",
-        "🏁RELAY-104.21.88.77-17",
+        "🏁RELAY-104.21.88.77-16",
+        "🏁RELAY-172.67.174.10-17",
         "🏁RELAY-104.16.148.5-18",
         "🇺🇸US-157.254.38.210-19",
-        "🇭🇰HK-8.210.108.58-20",
-        "🇺🇸US-157.254.38.210-21",
-        "🇭🇰HK-47.243.233.149-22",
-        "🇺🇸US-157.254.38.210-23",
-        "🇺🇸US-88.210.36.106-24",
-        "🇭🇰HK-47.76.102.39-25",
-        "🇭🇰HK-8.218.184.4-26",
-        "🇸🇬SG-47.129.65.118-27",
-        "🇭🇰HK-47.83.207.148-28",
-        "🇸🇬SG-47.129.65.118-29"
+        "🇭🇰HK-47.243.233.149-20",
+        "🇨🇳CN-61.171.92.202-21",
+        "🇭🇰HK-47.243.10.180-22",
+        "🇭🇰HK-47.76.197.72-23",
+        "🇭🇰HK-16.162.22.218-24",
+        "🇭🇰HK-47.83.207.148-25",
+        "🇺🇸US-157.254.38.210-26",
+        "🇨🇳CN-101.43.4.5-27",
+        "🇭🇰HK-47.239.208.160-28",
+        "🇳🇱NL-45.130.22.70-29",
+        "🇭🇰HK-43.100.32.12-30"
       ],
       "interval": "5m",
       "tolerance": 50
@@ -959,11 +961,13 @@
         "🇭🇰HK-18.163.100.58-13",
         "🇭🇰HK-95.40.107.76-14",
         "🇭🇰HK-16.162.164.238-15",
-        "🇭🇰HK-8.210.108.58-20",
-        "🇭🇰HK-47.243.233.149-22",
-        "🇭🇰HK-47.76.102.39-25",
-        "🇭🇰HK-8.218.184.4-26",
-        "🇭🇰HK-47.83.207.148-28"
+        "🇭🇰HK-47.243.233.149-20",
+        "🇭🇰HK-47.243.10.180-22",
+        "🇭🇰HK-47.76.197.72-23",
+        "🇭🇰HK-16.162.22.218-24",
+        "🇭🇰HK-47.83.207.148-25",
+        "🇭🇰HK-47.239.208.160-28",
+        "🇭🇰HK-43.100.32.12-30"
       ]
     },
     {
@@ -992,11 +996,13 @@
         "🇭🇰HK-18.163.100.58-13",
         "🇭🇰HK-95.40.107.76-14",
         "🇭🇰HK-16.162.164.238-15",
-        "🇭🇰HK-8.210.108.58-20",
-        "🇭🇰HK-47.243.233.149-22",
-        "🇭🇰HK-47.76.102.39-25",
-        "🇭🇰HK-8.218.184.4-26",
-        "🇭🇰HK-47.83.207.148-28"
+        "🇭🇰HK-47.243.233.149-20",
+        "🇭🇰HK-47.243.10.180-22",
+        "🇭🇰HK-47.76.197.72-23",
+        "🇭🇰HK-16.162.22.218-24",
+        "🇭🇰HK-47.83.207.148-25",
+        "🇭🇰HK-47.239.208.160-28",
+        "🇭🇰HK-43.100.32.12-30"
       ],
       "interval": "5m"
     },
@@ -1008,9 +1014,7 @@
         "us|0da3|puddincat07@Telegram",
         "🇺🇸_US_美国",
         "🇺🇸US-157.254.38.210-19",
-        "🇺🇸US-157.254.38.210-21",
-        "🇺🇸US-157.254.38.210-23",
-        "🇺🇸US-88.210.36.106-24"
+        "🇺🇸US-157.254.38.210-26"
       ]
     },
     {
@@ -1020,27 +1024,7 @@
         "us|0da3|puddincat07@Telegram",
         "🇺🇸_US_美国",
         "🇺🇸US-157.254.38.210-19",
-        "🇺🇸US-157.254.38.210-21",
-        "🇺🇸US-157.254.38.210-23",
-        "🇺🇸US-88.210.36.106-24"
-      ],
-      "interval": "5m"
-    },
-    {
-      "type": "selector",
-      "tag": "🇸🇬 新加坡",
-      "outbounds": [
-        "🇸🇬 新加坡 - 自动",
-        "🇸🇬SG-47.129.65.118-27",
-        "🇸🇬SG-47.129.65.118-29"
-      ]
-    },
-    {
-      "type": "urltest",
-      "tag": "🇸🇬 新加坡 - 自动",
-      "outbounds": [
-        "🇸🇬SG-47.129.65.118-27",
-        "🇸🇬SG-47.129.65.118-29"
+        "🇺🇸US-157.254.38.210-26"
       ],
       "interval": "5m"
     },
@@ -1105,7 +1089,8 @@
         "🇳🇱 荷兰 - 自动",
         "nl|42be|puddincat07@Telegram",
         "🇳🇱_NL_荷兰",
-        "🇳🇱_NL_荷兰_1"
+        "🇳🇱_NL_荷兰_1",
+        "🇳🇱NL-45.130.22.70-29"
       ]
     },
     {
@@ -1114,7 +1099,8 @@
       "outbounds": [
         "nl|42be|puddincat07@Telegram",
         "🇳🇱_NL_荷兰",
-        "🇳🇱_NL_荷兰_1"
+        "🇳🇱_NL_荷兰_1",
+        "🇳🇱NL-45.130.22.70-29"
       ],
       "interval": "5m"
     },
@@ -6179,8 +6165,8 @@
     },
     {
       "type": "trojan",
-      "tag": "🏁RELAY-172.67.149.60-00",
-      "server": "172.67.149.60",
+      "tag": "🏁RELAY-198.41.223.96-00",
+      "server": "198.41.223.96",
       "server_port": 443,
       "password": "humanity",
       "tls": {
@@ -6194,8 +6180,8 @@
     },
     {
       "type": "trojan",
-      "tag": "🏁RELAY-104.18.152.155-01",
-      "server": "104.18.152.155",
+      "tag": "🏁RELAY-104.18.152.97-01",
+      "server": "104.18.152.97",
       "server_port": 443,
       "password": "humanity",
       "tls": {
@@ -6407,7 +6393,7 @@
     },
     {
       "type": "trojan",
-      "tag": "🏁RELAY-172.67.174.10-16",
+      "tag": "🏁RELAY-104.21.88.77-16",
       "server": "blackshadow.dpdns.org",
       "server_port": 443,
       "password": "订阅内容解析错误2bcfbfba-b446-4ad5-93ad-72af9e008f61",
@@ -6422,7 +6408,7 @@
     },
     {
       "type": "trojan",
-      "tag": "🏁RELAY-104.21.88.77-17",
+      "tag": "🏁RELAY-172.67.174.10-17",
       "server": "blackshadow.dpdns.org",
       "server_port": 443,
       "password": "2bcfbfba-b446-4ad5-93ad-72af9e008f61",
@@ -6467,38 +6453,7 @@
     },
     {
       "type": "vmess",
-      "tag": "🇭🇰HK-8.210.108.58-20",
-      "server": "u2frxj0g13vdi0wo.v.3dns.vip",
-      "server_port": 443,
-      "uuid": "f23bb427c1f94373876c2f43e9f790f3",
-      "security": "auto",
-      "alter_id": 0,
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      },
-      "transport": {
-        "type": "ws"
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "🇺🇸US-157.254.38.210-21",
-      "server": "hkdcrtc-e.catcat321.com",
-      "server_port": 20041,
-      "password": "ba07a8af-5544-48ac-ab62-3b6c00a44fa6",
-      "tls": {
-        "enabled": true,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "tcp_fast_open": true
-    },
-    {
-      "type": "vmess",
-      "tag": "🇭🇰HK-47.243.233.149-22",
+      "tag": "🇭🇰HK-47.243.233.149-20",
       "server": "7timuei1uufoixbf.v.3dns.vip",
       "server_port": 443,
       "uuid": "f23bb427c1f94373876c2f43e9f790f3",
@@ -6513,11 +6468,52 @@
       }
     },
     {
+      "type": "shadowsocks",
+      "tag": "🇨🇳CN-61.171.92.202-21",
+      "server": "61.171.92.202",
+      "server_port": 1001,
+      "method": "aes-256-gcm",
+      "password": "123",
+      "tcp_fast_open": true
+    },
+    {
+      "type": "vmess",
+      "tag": "🇭🇰HK-47.243.10.180-22",
+      "server": "zudssgtmrqg9lpvi.v.3dns.vip",
+      "server_port": 443,
+      "uuid": "f23bb427c1f94373876c2f43e9f790f3",
+      "security": "auto",
+      "alter_id": 0,
+      "tls": {
+        "enabled": true,
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws"
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "🇭🇰HK-47.76.197.72-23",
+      "server": "m01c7b2z26dtqgee.v.3dns.vip",
+      "server_port": 443,
+      "uuid": "f23bb427c1f94373876c2f43e9f790f3",
+      "security": "auto",
+      "alter_id": 0,
+      "tls": {
+        "enabled": true,
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws"
+      }
+    },
+    {
       "type": "trojan",
-      "tag": "🇺🇸US-157.254.38.210-23",
-      "server": "Hkdcrtc-e.catcat321.com",
-      "server_port": 20041,
-      "password": "ba07a8af-5544-48ac-ab62-3b6c00a44fa6",
+      "tag": "🇭🇰HK-16.162.22.218-24",
+      "server": "16.162.22.218",
+      "server_port": 9149,
+      "password": "BxceQaOe",
       "tls": {
         "enabled": true,
         "utls": {
@@ -6528,58 +6524,8 @@
       "tcp_fast_open": true
     },
     {
-      "type": "shadowsocks",
-      "tag": "🇺🇸US-88.210.36.106-24",
-      "server": "88.210.36.106",
-      "server_port": 2377,
-      "method": "chacha20-ietf-poly1305",
-      "password": "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv",
-      "tcp_fast_open": true
-    },
-    {
       "type": "vmess",
-      "tag": "🇭🇰HK-47.76.102.39-25",
-      "server": "ex1ogt73nzpqkac2.v.3dns.vip",
-      "server_port": 443,
-      "uuid": "f23bb427c1f94373876c2f43e9f790f3",
-      "security": "auto",
-      "alter_id": 0,
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      },
-      "transport": {
-        "type": "ws"
-      }
-    },
-    {
-      "type": "vmess",
-      "tag": "🇭🇰HK-8.218.184.4-26",
-      "server": "nycqg19zkwacpm1b.v.3dns.vip",
-      "server_port": 443,
-      "uuid": "f23bb427c1f94373876c2f43e9f790f3",
-      "security": "auto",
-      "alter_id": 0,
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      },
-      "transport": {
-        "type": "ws"
-      }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇸🇬SG-47.129.65.118-27",
-      "server": "epnbiaynh2yw.cdn000.com",
-      "server_port": 30302,
-      "method": "2022-blake3-aes-128-gcm",
-      "password": "Y2FkNzhhZWQ0MzA1NzlhZA==:YmU0ZDQzODMtYWFhZi00Yg==",
-      "tcp_fast_open": true
-    },
-    {
-      "type": "vmess",
-      "tag": "🇭🇰HK-47.83.207.148-28",
+      "tag": "🇭🇰HK-47.83.207.148-25",
       "server": "vah4urdzl3jdx5r2.v.3dns.vip",
       "server_port": 443,
       "uuid": "f23bb427c1f94373876c2f43e9f790f3",
@@ -6594,13 +6540,75 @@
       }
     },
     {
-      "type": "shadowsocks",
-      "tag": "🇸🇬SG-47.129.65.118-29",
-      "server": "epnbiaynh2yw.cdn000.com",
-      "server_port": 30204,
-      "method": "2022-blake3-aes-128-gcm",
-      "password": "Y2FkNzhhZWQ0MzA1NzlhZA==:YmU0ZDQzODMtYWFhZi00Yg==",
+      "type": "trojan",
+      "tag": "🇺🇸US-157.254.38.210-26",
+      "server": "hkdcrtc-e.catcat321.com",
+      "server_port": 20041,
+      "password": "ba07a8af-5544-48ac-ab62-3b6c00a44fa6",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
       "tcp_fast_open": true
+    },
+    {
+      "type": "vmess",
+      "tag": "🇨🇳CN-101.43.4.5-27",
+      "server": "v9.hdacd.com",
+      "server_port": 30809,
+      "uuid": "cbb3f877-d1fb-344c-87a9-d153bffd5484",
+      "security": "auto",
+      "alter_id": 2
+    },
+    {
+      "type": "vmess",
+      "tag": "🇭🇰HK-47.239.208.160-28",
+      "server": "drbkg16egf3fzlm3.v.3dns.vip",
+      "server_port": 443,
+      "uuid": "f23bb427c1f94373876c2f43e9f790f3",
+      "security": "auto",
+      "alter_id": 0,
+      "tls": {
+        "enabled": true,
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws"
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇳🇱NL-45.130.22.70-29",
+      "server": "45.130.22.70",
+      "server_port": 32914,
+      "password": "1BARPLkaLl",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "tcp_fast_open": true
+    },
+    {
+      "type": "vmess",
+      "tag": "🇭🇰HK-43.100.32.12-30",
+      "server": "n1747624274.4u9ma.icu",
+      "server_port": 443,
+      "uuid": "d8daf507-a4ac-4eea-8399-8f0cd071eb52",
+      "security": "auto",
+      "alter_id": 0,
+      "tls": {
+        "enabled": true,
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws"
+      }
     },
     {
       "type": "direct",
