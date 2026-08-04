@@ -189,6 +189,19 @@
       "interval": "5m"
     },
     {
+      "type": "selector",
+      "tag": "🇲🇾 马来西亚",
+      "outbounds": [
+        "🇲🇾 马来西亚 - 自动"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "🇲🇾 马来西亚 - 自动",
+      "outbounds": [],
+      "interval": "5m"
+    },
+    {
       "type": "shadowsocks",
       "tag": "xx|b116|puddincat07@Telegram",
       "server": "ss.045.node-for-bigairport.win",
