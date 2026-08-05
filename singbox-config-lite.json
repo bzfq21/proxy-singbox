@@ -179,32 +179,6 @@
     },
     {
       "type": "selector",
-      "tag": "🇳🇱 荷兰",
-      "outbounds": [
-        "🇳🇱 荷兰 - 自动"
-      ]
-    },
-    {
-      "type": "urltest",
-      "tag": "🇳🇱 荷兰 - 自动",
-      "outbounds": [],
-      "interval": "5m"
-    },
-    {
-      "type": "selector",
-      "tag": "🇷🇺 俄罗斯",
-      "outbounds": [
-        "🇷🇺 俄罗斯 - 自动"
-      ]
-    },
-    {
-      "type": "urltest",
-      "tag": "🇷🇺 俄罗斯 - 自动",
-      "outbounds": [],
-      "interval": "5m"
-    },
-    {
-      "type": "selector",
       "tag": "🇧🇷 巴西",
       "outbounds": [
         "🇧🇷 巴西 - 自动",
@@ -217,19 +191,6 @@
       "outbounds": [
         "br|f0c4|puddincat07@Telegram"
       ],
-      "interval": "5m"
-    },
-    {
-      "type": "selector",
-      "tag": "🇲🇾 马来西亚",
-      "outbounds": [
-        "🇲🇾 马来西亚 - 自动"
-      ]
-    },
-    {
-      "type": "urltest",
-      "tag": "🇲🇾 马来西亚 - 自动",
-      "outbounds": [],
       "interval": "5m"
     },
     {
