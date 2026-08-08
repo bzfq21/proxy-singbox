@@ -68,19 +68,19 @@
         "♻️ 自动",
         "es|e379|puddincat07@Telegram",
         "xx|6cf2|puddincat07@Telegram",
-        "xx|c44f|puddincat07@Telegram",
         "xx|ef9a|puddincat07@Telegram",
-        "nl|7363|puddincat07@Telegram",
-        "xx|304b|puddincat07@Telegram",
         "se|8c7d|puddincat07@Telegram",
-        "jp|6953|puddincat07@Telegram",
+        "xx|304b|puddincat07@Telegram",
         "us|95ff|puddincat07@Telegram",
+        "jp|6953|puddincat07@Telegram",
         "xx|8151|puddincat07@Telegram",
         "us|d13a|puddincat07@Telegram",
+        "us|3fe0|puddincat07@Telegram",
         "gb|99d3|puddincat07@Telegram",
-        "xx|5432|puddincat07@Telegram",
-        "xx|64ad|puddincat07@Telegram",
-        "us|c65d|puddincat07@Telegram",
+        "nl|42be|puddincat07@Telegram",
+        "nl|7363|puddincat07@Telegram",
+        "de|27a4|puddincat07@Telegram",
+        "us|675b|puddincat07@Telegram",
         "⚪🏳️_github.com/Ruk1ng001_5da2fc4b",
         "🟠🇯🇵[🎬🤖📺🎭]_github.com/Ruk1ng001_b8dae5e5",
         "🟠🇯🇵[🎬🤖📺🎭]_github.com/Ruk1ng001_db45f944",
@@ -474,19 +474,19 @@
       "outbounds": [
         "es|e379|puddincat07@Telegram",
         "xx|6cf2|puddincat07@Telegram",
-        "xx|c44f|puddincat07@Telegram",
         "xx|ef9a|puddincat07@Telegram",
-        "nl|7363|puddincat07@Telegram",
-        "xx|304b|puddincat07@Telegram",
         "se|8c7d|puddincat07@Telegram",
-        "jp|6953|puddincat07@Telegram",
+        "xx|304b|puddincat07@Telegram",
         "us|95ff|puddincat07@Telegram",
+        "jp|6953|puddincat07@Telegram",
         "xx|8151|puddincat07@Telegram",
         "us|d13a|puddincat07@Telegram",
+        "us|3fe0|puddincat07@Telegram",
         "gb|99d3|puddincat07@Telegram",
-        "xx|5432|puddincat07@Telegram",
-        "xx|64ad|puddincat07@Telegram",
-        "us|c65d|puddincat07@Telegram",
+        "nl|42be|puddincat07@Telegram",
+        "nl|7363|puddincat07@Telegram",
+        "de|27a4|puddincat07@Telegram",
+        "us|675b|puddincat07@Telegram",
         "⚪🏳️_github.com/Ruk1ng001_5da2fc4b",
         "🟠🇯🇵[🎬🤖📺🎭]_github.com/Ruk1ng001_b8dae5e5",
         "🟠🇯🇵[🎬🤖📺🎭]_github.com/Ruk1ng001_db45f944",
@@ -921,7 +921,8 @@
         "🇺🇸 美国 - 自动",
         "us|95ff|puddincat07@Telegram",
         "us|d13a|puddincat07@Telegram",
-        "us|c65d|puddincat07@Telegram",
+        "us|3fe0|puddincat07@Telegram",
+        "us|675b|puddincat07@Telegram",
         "🇺🇸_US_美国",
         "🇺🇸_US_美国_1",
         "🇺🇸_US_美国_2",
@@ -934,7 +935,8 @@
       "outbounds": [
         "us|95ff|puddincat07@Telegram",
         "us|d13a|puddincat07@Telegram",
-        "us|c65d|puddincat07@Telegram",
+        "us|3fe0|puddincat07@Telegram",
+        "us|675b|puddincat07@Telegram",
         "🇺🇸_US_美国",
         "🇺🇸_US_美国_1",
         "🇺🇸_US_美国_2",
@@ -947,6 +949,7 @@
       "tag": "🇩🇪 德国",
       "outbounds": [
         "🇩🇪 德国 - 自动",
+        "de|27a4|puddincat07@Telegram",
         "🇮🇷_IR_伊朗->🇩🇪_DE_德国",
         "🇨🇳_CN_中国->🇩🇪_DE_德国",
         "🇩🇪_DE_德国_1",
@@ -957,6 +960,7 @@
       "type": "urltest",
       "tag": "🇩🇪 德国 - 自动",
       "outbounds": [
+        "de|27a4|puddincat07@Telegram",
         "🇮🇷_IR_伊朗->🇩🇪_DE_德国",
         "🇨🇳_CN_中国->🇩🇪_DE_德国",
         "🇩🇪_DE_德国_1",
@@ -1001,6 +1005,7 @@
       "tag": "🇳🇱 荷兰",
       "outbounds": [
         "🇳🇱 荷兰 - 自动",
+        "nl|42be|puddincat07@Telegram",
         "nl|7363|puddincat07@Telegram",
         "🇳🇱_NL_荷兰",
         "🇳🇱_NL_荷兰_1"
@@ -1010,6 +1015,7 @@
       "type": "urltest",
       "tag": "🇳🇱 荷兰 - 自动",
       "outbounds": [
+        "nl|42be|puddincat07@Telegram",
         "nl|7363|puddincat07@Telegram",
         "🇳🇱_NL_荷兰",
         "🇳🇱_NL_荷兰_1"
@@ -1082,16 +1088,6 @@
     },
     {
       "type": "hysteria2",
-      "tag": "xx|c44f|puddincat07@Telegram",
-      "server": "de-two.quiet-rogue.site",
-      "server_port": 443,
-      "password": "71cada65-d23e-418c-88e4-a06188d14689",
-      "tls": {
-        "enabled": true
-      }
-    },
-    {
-      "type": "hysteria2",
       "tag": "xx|ef9a|puddincat07@Telegram",
       "server": "musicclips.videolinks.ru",
       "server_port": 8443,
@@ -1100,26 +1096,6 @@
         "type": "salamander",
         "password": "8zzng75tz4tf82pj"
       },
-      "tls": {
-        "enabled": true
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "nl|7363|puddincat07@Telegram",
-      "server": "5.129.235.85",
-      "server_port": 443,
-      "password": "gf1:gfhysteria2024",
-      "tls": {
-        "enabled": true
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "xx|304b|puddincat07@Telegram",
-      "server": "db1.mangshe.xyz",
-      "server_port": 2056,
-      "password": "9d3356a0-c07e-43cc-b30e-450bd50521b8",
       "tls": {
         "enabled": true
       }
@@ -1134,9 +1110,19 @@
       "tcp_fast_open": true
     },
     {
+      "type": "hysteria2",
+      "tag": "xx|304b|puddincat07@Telegram",
+      "server": "db1.mangshe.xyz",
+      "server_port": 2056,
+      "password": "9d3356a0-c07e-43cc-b30e-450bd50521b8",
+      "tls": {
+        "enabled": true
+      }
+    },
+    {
       "type": "shadowsocks",
-      "tag": "jp|6953|puddincat07@Telegram",
-      "server": "13.114.17.103",
+      "tag": "us|95ff|puddincat07@Telegram",
+      "server": "98.89.48.191",
       "server_port": 443,
       "method": "aes-256-cfb",
       "password": "amazonskr05",
@@ -1144,8 +1130,8 @@
     },
     {
       "type": "shadowsocks",
-      "tag": "us|95ff|puddincat07@Telegram",
-      "server": "98.89.48.191",
+      "tag": "jp|6953|puddincat07@Telegram",
+      "server": "13.114.17.103",
       "server_port": 443,
       "method": "aes-256-cfb",
       "password": "amazonskr05",
@@ -1174,29 +1160,18 @@
       }
     },
     {
-      "type": "shadowsocks",
-      "tag": "gb|99d3|puddincat07@Telegram",
-      "server": "82.38.31.2",
-      "server_port": 8080,
-      "method": "chacha20-ietf-poly1305",
-      "password": "oZIoA69Q8yhcQV8ka3Pa3A",
-      "tcp_fast_open": true
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "xx|5432|puddincat07@Telegram",
-      "server": "8h2k03.a3b5wy.xyz",
-      "server_port": 36018,
-      "method": "chacha20-ietf-poly1305",
-      "password": "3016be06-2f91-4b8f-9e6a-bd55f2c55610",
-      "tcp_fast_open": true
-    },
-    {
       "type": "trojan",
-      "tag": "xx|64ad|puddincat07@Telegram",
-      "server": "2t1u01.a3b5wy.xyz",
-      "server_port": 36868,
-      "password": "3016be06-2f91-4b8f-9e6a-bd55f2c55610",
+      "tag": "us|3fe0|puddincat07@Telegram",
+      "server": "104.20.48.11",
+      "server_port": 443,
+      "password": "chrysanthemum",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "cmee.ezbiz.dynv6.net"
+        }
+      },
       "tls": {
         "enabled": true,
         "utls": {
@@ -1208,11 +1183,48 @@
     },
     {
       "type": "shadowsocks",
-      "tag": "us|c65d|puddincat07@Telegram",
-      "server": "38.75.137.93",
-      "server_port": 8008,
-      "method": "aes-256-gcm",
-      "password": "XKFKl2rULjIp74",
+      "tag": "gb|99d3|puddincat07@Telegram",
+      "server": "82.38.31.2",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "oZIoA69Q8yhcQV8ka3Pa3A",
+      "tcp_fast_open": true
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "nl|42be|puddincat07@Telegram",
+      "server": "193.29.139.151",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "oZIoA69Q8yhcQV8ka3Pa3A",
+      "tcp_fast_open": true
+    },
+    {
+      "type": "hysteria2",
+      "tag": "nl|7363|puddincat07@Telegram",
+      "server": "5.129.235.85",
+      "server_port": 443,
+      "password": "gf1:gfhysteria2024",
+      "tls": {
+        "enabled": true
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "de|27a4|puddincat07@Telegram",
+      "server": "63.180.254.10",
+      "server_port": 443,
+      "method": "aes-256-cfb",
+      "password": "amazonskr05",
+      "tcp_fast_open": true
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "us|675b|puddincat07@Telegram",
+      "server": "156.146.38.169",
+      "server_port": 443,
+      "method": "aes-128-gcm",
+      "password": "shadowsocks",
       "tcp_fast_open": true
     },
     {
