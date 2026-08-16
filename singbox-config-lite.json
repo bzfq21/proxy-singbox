@@ -52,12 +52,12 @@
         "us|9f71|puddincat07@Telegram",
         "xx|9b26|puddincat07@Telegram",
         "xx|c122|puddincat07@Telegram",
-        "us|cc28|puddincat07@Telegram",
+        "us|2a14|puddincat07@Telegram",
         "us|b4ce|puddincat07@Telegram",
         "us|7ca3|puddincat07@Telegram",
-        "us|2a14|puddincat07@Telegram",
         "xx|8008|puddincat07@Telegram",
         "xx|0db7|puddincat07@Telegram",
+        "us|cc28|puddincat07@Telegram",
         "us|e9fc|puddincat07@Telegram",
         "us|b395|puddincat07@Telegram",
         "us|b84c|puddincat07@Telegram"
@@ -73,12 +73,12 @@
         "us|9f71|puddincat07@Telegram",
         "xx|9b26|puddincat07@Telegram",
         "xx|c122|puddincat07@Telegram",
-        "us|cc28|puddincat07@Telegram",
+        "us|2a14|puddincat07@Telegram",
         "us|b4ce|puddincat07@Telegram",
         "us|7ca3|puddincat07@Telegram",
-        "us|2a14|puddincat07@Telegram",
         "xx|8008|puddincat07@Telegram",
         "xx|0db7|puddincat07@Telegram",
+        "us|cc28|puddincat07@Telegram",
         "us|e9fc|puddincat07@Telegram",
         "us|b395|puddincat07@Telegram",
         "us|b84c|puddincat07@Telegram"
@@ -105,10 +105,10 @@
       "outbounds": [
         "🇺🇸 美国 - 自动",
         "us|9f71|puddincat07@Telegram",
-        "us|cc28|puddincat07@Telegram",
+        "us|2a14|puddincat07@Telegram",
         "us|b4ce|puddincat07@Telegram",
         "us|7ca3|puddincat07@Telegram",
-        "us|2a14|puddincat07@Telegram",
+        "us|cc28|puddincat07@Telegram",
         "us|e9fc|puddincat07@Telegram",
         "us|b395|puddincat07@Telegram",
         "us|b84c|puddincat07@Telegram"
@@ -119,10 +119,10 @@
       "tag": "🇺🇸 美国 - 自动",
       "outbounds": [
         "us|9f71|puddincat07@Telegram",
-        "us|cc28|puddincat07@Telegram",
+        "us|2a14|puddincat07@Telegram",
         "us|b4ce|puddincat07@Telegram",
         "us|7ca3|puddincat07@Telegram",
-        "us|2a14|puddincat07@Telegram",
+        "us|cc28|puddincat07@Telegram",
         "us|e9fc|puddincat07@Telegram",
         "us|b395|puddincat07@Telegram",
         "us|b84c|puddincat07@Telegram"
@@ -302,15 +302,15 @@
     },
     {
       "type": "trojan",
-      "tag": "us|cc28|puddincat07@Telegram",
-      "server": "104.18.152.246",
+      "tag": "us|2a14|puddincat07@Telegram",
+      "server": "172.67.221.242",
       "server_port": 443,
       "password": "humanity",
       "transport": {
         "type": "ws",
         "path": "/assignment",
         "headers": {
-          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safari/537.36"
+          "User-Agent": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36"
         }
       },
       "tls": {
@@ -368,28 +368,6 @@
     },
     {
       "type": "trojan",
-      "tag": "us|2a14|puddincat07@Telegram",
-      "server": "172.67.221.242",
-      "server_port": 443,
-      "password": "humanity",
-      "transport": {
-        "type": "ws",
-        "path": "/assignment",
-        "headers": {
-          "User-Agent": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36"
-        }
-      },
-      "tls": {
-        "enabled": true,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "tcp_fast_open": true
-    },
-    {
-      "type": "trojan",
       "tag": "xx|8008|puddincat07@Telegram",
       "server": "www.ignitelimit.com",
       "server_port": 443,
@@ -418,6 +396,28 @@
       "uuid": "cbb3f877-d1fb-344c-87a9-d153bffd5484",
       "security": "auto",
       "alter_id": 2
+    },
+    {
+      "type": "trojan",
+      "tag": "us|cc28|puddincat07@Telegram",
+      "server": "104.18.152.246",
+      "server_port": 443,
+      "password": "humanity",
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safari/537.36"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "tcp_fast_open": true
     },
     {
       "type": "trojan",
