@@ -81,7 +81,7 @@
         "us|f410|puddincat07@Telegram",
         "us|3f57|puddincat07@Telegram",
         "us|2fd2|puddincat07@Telegram",
-        "us|2e5f|puddincat07@Telegram",
+        "xx|cf0d|puddincat07@Telegram",
         "⚪🏳️_github.com/Ruk1ng001_36e61df6",
         "⚪🏳️_github.com/Ruk1ng001_21b3202d",
         "🟠🇰🇷[🎬🤖📺🎭]_github.com/Ruk1ng001_f9dd3272",
@@ -577,7 +577,7 @@
         "us|f410|puddincat07@Telegram",
         "us|3f57|puddincat07@Telegram",
         "us|2fd2|puddincat07@Telegram",
-        "us|2e5f|puddincat07@Telegram",
+        "xx|cf0d|puddincat07@Telegram",
         "⚪🏳️_github.com/Ruk1ng001_36e61df6",
         "⚪🏳️_github.com/Ruk1ng001_21b3202d",
         "🟠🇰🇷[🎬🤖📺🎭]_github.com/Ruk1ng001_f9dd3272",
@@ -1107,7 +1107,6 @@
         "us|f410|puddincat07@Telegram",
         "us|3f57|puddincat07@Telegram",
         "us|2fd2|puddincat07@Telegram",
-        "us|2e5f|puddincat07@Telegram",
         "🇺🇸_US_美国",
         "🇺🇸_US_美国_1",
         "🇺🇸_US_美国_2",
@@ -1134,7 +1133,6 @@
         "us|f410|puddincat07@Telegram",
         "us|3f57|puddincat07@Telegram",
         "us|2fd2|puddincat07@Telegram",
-        "us|2e5f|puddincat07@Telegram",
         "🇺🇸_US_美国",
         "🇺🇸_US_美国_1",
         "🇺🇸_US_美国_2",
@@ -1506,15 +1504,15 @@
     },
     {
       "type": "trojan",
-      "tag": "us|2e5f|puddincat07@Telegram",
-      "server": "104.18.23.63",
+      "tag": "xx|cf0d|puddincat07@Telegram",
+      "server": "join-telegram-channel-tirexnet.trex.kdns.fr",
       "server_port": 443,
       "password": "humanity",
       "transport": {
         "type": "ws",
         "path": "/assignment",
         "headers": {
-          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36"
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36"
         }
       },
       "tls": {

@@ -61,7 +61,7 @@
         "us|f410|puddincat07@Telegram",
         "us|3f57|puddincat07@Telegram",
         "us|2fd2|puddincat07@Telegram",
-        "us|2e5f|puddincat07@Telegram"
+        "xx|cf0d|puddincat07@Telegram"
       ]
     },
     {
@@ -83,7 +83,7 @@
         "us|f410|puddincat07@Telegram",
         "us|3f57|puddincat07@Telegram",
         "us|2fd2|puddincat07@Telegram",
-        "us|2e5f|puddincat07@Telegram"
+        "xx|cf0d|puddincat07@Telegram"
       ],
       "interval": "5m",
       "tolerance": 50
@@ -130,8 +130,7 @@
         "us|8095|puddincat07@Telegram",
         "us|f410|puddincat07@Telegram",
         "us|3f57|puddincat07@Telegram",
-        "us|2fd2|puddincat07@Telegram",
-        "us|2e5f|puddincat07@Telegram"
+        "us|2fd2|puddincat07@Telegram"
       ]
     },
     {
@@ -149,8 +148,7 @@
         "us|8095|puddincat07@Telegram",
         "us|f410|puddincat07@Telegram",
         "us|3f57|puddincat07@Telegram",
-        "us|2fd2|puddincat07@Telegram",
-        "us|2e5f|puddincat07@Telegram"
+        "us|2fd2|puddincat07@Telegram"
       ],
       "interval": "5m"
     },
@@ -506,15 +504,15 @@
     },
     {
       "type": "trojan",
-      "tag": "us|2e5f|puddincat07@Telegram",
-      "server": "104.18.23.63",
+      "tag": "xx|cf0d|puddincat07@Telegram",
+      "server": "join-telegram-channel-tirexnet.trex.kdns.fr",
       "server_port": 443,
       "password": "humanity",
       "transport": {
         "type": "ws",
         "path": "/assignment",
         "headers": {
-          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36"
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36"
         }
       },
       "tls": {
