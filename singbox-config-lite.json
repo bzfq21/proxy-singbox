@@ -148,6 +148,32 @@
     },
     {
       "type": "selector",
+      "tag": "🇸🇬 新加坡",
+      "outbounds": [
+        "🇸🇬 新加坡 - 自动"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "🇸🇬 新加坡 - 自动",
+      "outbounds": [],
+      "interval": "5m"
+    },
+    {
+      "type": "selector",
+      "tag": "🇰🇷 韩国",
+      "outbounds": [
+        "🇰🇷 韩国 - 自动"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "🇰🇷 韩国 - 自动",
+      "outbounds": [],
+      "interval": "5m"
+    },
+    {
+      "type": "selector",
       "tag": "🇩🇪 德国",
       "outbounds": [
         "🇩🇪 德国 - 自动"
@@ -156,6 +182,19 @@
     {
       "type": "urltest",
       "tag": "🇩🇪 德国 - 自动",
+      "outbounds": [],
+      "interval": "5m"
+    },
+    {
+      "type": "selector",
+      "tag": "🇬🇧 英国",
+      "outbounds": [
+        "🇬🇧 英国 - 自动"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "🇬🇧 英国 - 自动",
       "outbounds": [],
       "interval": "5m"
     },
@@ -190,6 +229,19 @@
     },
     {
       "type": "selector",
+      "tag": "🇷🇺 俄罗斯",
+      "outbounds": [
+        "🇷🇺 俄罗斯 - 自动"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "🇷🇺 俄罗斯 - 自动",
+      "outbounds": [],
+      "interval": "5m"
+    },
+    {
+      "type": "selector",
       "tag": "🇨🇦 加拿大",
       "outbounds": [
         "🇨🇦 加拿大 - 自动",
@@ -206,6 +258,19 @@
     },
     {
       "type": "selector",
+      "tag": "🇮🇳 印度",
+      "outbounds": [
+        "🇮🇳 印度 - 自动"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "🇮🇳 印度 - 自动",
+      "outbounds": [],
+      "interval": "5m"
+    },
+    {
+      "type": "selector",
       "tag": "🇹🇭 泰国",
       "outbounds": [
         "🇹🇭 泰国 - 自动",
@@ -218,6 +283,19 @@
       "outbounds": [
         "th|55f8|puddincat07@Telegram"
       ],
+      "interval": "5m"
+    },
+    {
+      "type": "selector",
+      "tag": "🇲🇾 马来西亚",
+      "outbounds": [
+        "🇲🇾 马来西亚 - 自动"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "🇲🇾 马来西亚 - 自动",
+      "outbounds": [],
       "interval": "5m"
     },
     {
