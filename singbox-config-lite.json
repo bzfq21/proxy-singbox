@@ -284,14 +284,14 @@
     },
     {
       "type": "selector",
-      "tag": "🇹🇷 土耳其",
+      "tag": "🇮🇳 印度",
       "outbounds": [
-        "🇹🇷 土耳其 - 自动"
+        "🇮🇳 印度 - 自动"
       ]
     },
     {
       "type": "urltest",
-      "tag": "🇹🇷 土耳其 - 自动",
+      "tag": "🇮🇳 印度 - 自动",
       "outbounds": [],
       "interval": "5m"
     },
@@ -318,19 +318,6 @@
     {
       "type": "urltest",
       "tag": "🇧🇷 巴西 - 自动",
-      "outbounds": [],
-      "interval": "5m"
-    },
-    {
-      "type": "selector",
-      "tag": "🇲🇽 墨西哥",
-      "outbounds": [
-        "🇲🇽 墨西哥 - 自动"
-      ]
-    },
-    {
-      "type": "urltest",
-      "tag": "🇲🇽 墨西哥 - 自动",
       "outbounds": [],
       "interval": "5m"
     },
