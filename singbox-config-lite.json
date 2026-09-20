@@ -281,6 +281,19 @@
     },
     {
       "type": "selector",
+      "tag": "🇹🇷 土耳其",
+      "outbounds": [
+        "🇹🇷 土耳其 - 自动"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "🇹🇷 土耳其 - 自动",
+      "outbounds": [],
+      "interval": "5m"
+    },
+    {
+      "type": "selector",
       "tag": "🇧🇷 巴西",
       "outbounds": [
         "🇧🇷 巴西 - 自动"
@@ -289,19 +302,6 @@
     {
       "type": "urltest",
       "tag": "🇧🇷 巴西 - 自动",
-      "outbounds": [],
-      "interval": "5m"
-    },
-    {
-      "type": "selector",
-      "tag": "🇹🇭 泰国",
-      "outbounds": [
-        "🇹🇭 泰国 - 自动"
-      ]
-    },
-    {
-      "type": "urltest",
-      "tag": "🇹🇭 泰国 - 自动",
       "outbounds": [],
       "interval": "5m"
     },
