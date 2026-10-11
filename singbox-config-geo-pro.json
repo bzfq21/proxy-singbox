@@ -69,19 +69,19 @@
         "xx|febb|puddincat07@Telegram",
         "xx|3359|puddincat07@Telegram",
         "xx|01b0|puddincat07@Telegram",
-        "xx|5f1b|puddincat07@Telegram",
         "jp|a89b|puddincat07@Telegram",
+        "xx|5f1b|puddincat07@Telegram",
+        "jp|707c|puddincat07@Telegram",
         "kr|1325|puddincat07@Telegram",
-        "sg|3afb|puddincat07@Telegram",
-        "xx|966a|puddincat07@Telegram",
         "xx|344a|puddincat07@Telegram",
+        "sg|3afb|puddincat07@Telegram",
+        "hk|b589|puddincat07@Telegram",
         "sg|0ed4|puddincat07@Telegram",
+        "xx|4994|puddincat07@Telegram",
+        "xx|966a|puddincat07@Telegram",
         "us|8fee|puddincat07@Telegram",
         "au|c385|puddincat07@Telegram",
         "us|81c2|puddincat07@Telegram",
-        "us|7a73|puddincat07@Telegram",
-        "gb|f8b8|puddincat07@Telegram",
-        "ch|46cb|puddincat07@Telegram",
         "U⚪🏳️ukn[🎬📺🎭🎪]_dokng.com_c45ae8d8",
         "U⚪🏳️ukn_dokng.com_c4d8c40f",
         "A🟢🇨🇳res_dokng.com_2b9683c9",
@@ -1044,19 +1044,19 @@
         "xx|febb|puddincat07@Telegram",
         "xx|3359|puddincat07@Telegram",
         "xx|01b0|puddincat07@Telegram",
-        "xx|5f1b|puddincat07@Telegram",
         "jp|a89b|puddincat07@Telegram",
+        "xx|5f1b|puddincat07@Telegram",
+        "jp|707c|puddincat07@Telegram",
         "kr|1325|puddincat07@Telegram",
-        "sg|3afb|puddincat07@Telegram",
-        "xx|966a|puddincat07@Telegram",
         "xx|344a|puddincat07@Telegram",
+        "sg|3afb|puddincat07@Telegram",
+        "hk|b589|puddincat07@Telegram",
         "sg|0ed4|puddincat07@Telegram",
+        "xx|4994|puddincat07@Telegram",
+        "xx|966a|puddincat07@Telegram",
         "us|8fee|puddincat07@Telegram",
         "au|c385|puddincat07@Telegram",
         "us|81c2|puddincat07@Telegram",
-        "us|7a73|puddincat07@Telegram",
-        "gb|f8b8|puddincat07@Telegram",
-        "ch|46cb|puddincat07@Telegram",
         "U⚪🏳️ukn[🎬📺🎭🎪]_dokng.com_c45ae8d8",
         "U⚪🏳️ukn_dokng.com_c4d8c40f",
         "A🟢🇨🇳res_dokng.com_2b9683c9",
@@ -2019,6 +2019,7 @@
       "tag": "🇭🇰 香港",
       "outbounds": [
         "🇭🇰 香港 - 自动",
+        "hk|b589|puddincat07@Telegram",
         "🇭🇰[www.v2nodes.com] vless-HK",
         "🇭🇰[www.v2nodes.com] vless-HK #1",
         "🇭🇰[www.v2nodes.com] vless-HK #2",
@@ -2055,6 +2056,7 @@
       "type": "urltest",
       "tag": "🇭🇰 香港 - 自动",
       "outbounds": [
+        "hk|b589|puddincat07@Telegram",
         "🇭🇰[www.v2nodes.com] vless-HK",
         "🇭🇰[www.v2nodes.com] vless-HK #1",
         "🇭🇰[www.v2nodes.com] vless-HK #2",
@@ -2094,6 +2096,7 @@
       "outbounds": [
         "🇯🇵 日本 - 自动",
         "jp|a89b|puddincat07@Telegram",
+        "jp|707c|puddincat07@Telegram",
         "🇯🇵[www.v2nodes.com] trojan-JP-...",
         "🇯🇵[www.v2nodes.com] trojan-JP-... #1",
         "🇯🇵[www.v2nodes.com] trojan-JP-... #2",
@@ -2128,6 +2131,7 @@
       "tag": "🇯🇵 日本 - 自动",
       "outbounds": [
         "jp|a89b|puddincat07@Telegram",
+        "jp|707c|puddincat07@Telegram",
         "🇯🇵[www.v2nodes.com] trojan-JP-...",
         "🇯🇵[www.v2nodes.com] trojan-JP-... #1",
         "🇯🇵[www.v2nodes.com] trojan-JP-... #2",
@@ -2165,7 +2169,6 @@
         "🇺🇸 美国 - 自动",
         "us|8fee|puddincat07@Telegram",
         "us|81c2|puddincat07@Telegram",
-        "us|7a73|puddincat07@Telegram",
         "🇺🇸[www.v2nodes.com] vless-US-1... #9",
         "🇺🇸 美国|@ripaojiedian",
         "🇺🇸 美国2|@ripaojiedian",
@@ -2188,7 +2191,6 @@
       "outbounds": [
         "us|8fee|puddincat07@Telegram",
         "us|81c2|puddincat07@Telegram",
-        "us|7a73|puddincat07@Telegram",
         "🇺🇸[www.v2nodes.com] vless-US-1... #9",
         "🇺🇸 美国|@ripaojiedian",
         "🇺🇸 美国2|@ripaojiedian",
@@ -2433,7 +2435,6 @@
       "tag": "🇬🇧 英国",
       "outbounds": [
         "🇬🇧 英国 - 自动",
-        "gb|f8b8|puddincat07@Telegram",
         "🇬🇧[www.v2nodes.com] vless-GB-1... #6",
         "🇬🇧[www.v2nodes.com] vless-GB-1... #7",
         "🇬🇧[www.v2nodes.com] vless-GB-1... #8",
@@ -2448,7 +2449,6 @@
       "type": "urltest",
       "tag": "🇬🇧 英国 - 自动",
       "outbounds": [
-        "gb|f8b8|puddincat07@Telegram",
         "🇬🇧[www.v2nodes.com] vless-GB-1... #6",
         "🇬🇧[www.v2nodes.com] vless-GB-1... #7",
         "🇬🇧[www.v2nodes.com] vless-GB-1... #8",
@@ -2794,16 +2794,6 @@
     },
     {
       "type": "hysteria2",
-      "tag": "xx|5f1b|puddincat07@Telegram",
-      "server": "open.2ml.cc.cd",
-      "server_port": 5443,
-      "password": "my_super_password_123",
-      "tls": {
-        "enabled": true
-      }
-    },
-    {
-      "type": "hysteria2",
       "tag": "jp|a89b|puddincat07@Telegram",
       "server": "138.2.21.246",
       "server_port": 5443,
@@ -2814,10 +2804,40 @@
     },
     {
       "type": "hysteria2",
+      "tag": "xx|5f1b|puddincat07@Telegram",
+      "server": "open.2ml.cc.cd",
+      "server_port": 5443,
+      "password": "my_super_password_123",
+      "tls": {
+        "enabled": true
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "jp|707c|puddincat07@Telegram",
+      "server": "8.211.175.236",
+      "server_port": 8443,
+      "password": "u63SxILNwtrQZ7Y1ZrFaZfsA",
+      "tls": {
+        "enabled": true
+      }
+    },
+    {
+      "type": "hysteria2",
       "tag": "kr|1325|puddincat07@Telegram",
       "server": "152.70.237.123",
       "server_port": 2053,
       "password": "maintell",
+      "tls": {
+        "enabled": true
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "xx|344a|puddincat07@Telegram",
+      "server": "vpn-sg-001.fastervpn.world",
+      "server_port": 443,
+      "password": "qQe1z5kU8kN6SlKnDt9Ru3Qp",
       "tls": {
         "enabled": true
       }
@@ -2838,20 +2858,10 @@
     },
     {
       "type": "hysteria2",
-      "tag": "xx|966a|puddincat07@Telegram",
-      "server": "hy2.561891.xyz",
-      "server_port": 44356,
-      "password": "dongtaiwang.com",
-      "tls": {
-        "enabled": true
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "xx|344a|puddincat07@Telegram",
-      "server": "vpn-sg-001.fastervpn.world",
+      "tag": "hk|b589|puddincat07@Telegram",
+      "server": "202.146.222.29",
       "server_port": 443,
-      "password": "qQe1z5kU8kN6SlKnDt9Ru3Qp",
+      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
       "tls": {
         "enabled": true
       }
@@ -2862,6 +2872,26 @@
       "server": "138.2.73.238",
       "server_port": 50160,
       "password": "f87376e17da040ed04c9665ce8972930",
+      "tls": {
+        "enabled": true
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "xx|4994|puddincat07@Telegram",
+      "server": "hy2.123266.xyz",
+      "server_port": 33333,
+      "password": "bce6c821-200d-421f-bf3d-7159e5246ea0",
+      "tls": {
+        "enabled": true
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "xx|966a|puddincat07@Telegram",
+      "server": "hy2.561891.xyz",
+      "server_port": 44356,
+      "password": "dongtaiwang.com",
       "tls": {
         "enabled": true
       }
@@ -2896,36 +2926,6 @@
       "server": "129.213.91.185",
       "server_port": 35013,
       "password": "4291c983-c520-46ac-82cc-48f14bef573f",
-      "tls": {
-        "enabled": true
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "us|7a73|puddincat07@Telegram",
-      "server": "66.94.121.46",
-      "server_port": 443,
-      "password": "gf1:gfhysteria2024",
-      "tls": {
-        "enabled": true
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "gb|f8b8|puddincat07@Telegram",
-      "server": "82.38.64.237",
-      "server_port": 8443,
-      "password": "we9_I1893UFj3149xbr1_k8qvJ8734ic_Mx82gH",
-      "tls": {
-        "enabled": true
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "ch|46cb|puddincat07@Telegram",
-      "server": "140.238.213.114",
-      "server_port": 50160,
-      "password": "84a506ca5aca505696a454d828420b3f",
       "tls": {
         "enabled": true
       }
