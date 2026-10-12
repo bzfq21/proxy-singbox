@@ -311,19 +311,6 @@
     },
     {
       "type": "selector",
-      "tag": "🇧🇷 巴西",
-      "outbounds": [
-        "🇧🇷 巴西 - 自动"
-      ]
-    },
-    {
-      "type": "urltest",
-      "tag": "🇧🇷 巴西 - 自动",
-      "outbounds": [],
-      "interval": "5m"
-    },
-    {
-      "type": "selector",
       "tag": "🇲🇽 墨西哥",
       "outbounds": [
         "🇲🇽 墨西哥 - 自动"
