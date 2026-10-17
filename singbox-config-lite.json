@@ -46,44 +46,44 @@
       "tag": "🚀 节点",
       "outbounds": [
         "♻️ 自动",
-        "jp|707c|puddincat07@Telegram",
         "xx|febb|puddincat07@Telegram",
+        "jp|707c|puddincat07@Telegram",
         "kr|1325|puddincat07@Telegram",
         "xx|344a|puddincat07@Telegram",
         "sg|0ed4|puddincat07@Telegram",
-        "xx|c671|puddincat07@Telegram",
-        "us|c285|puddincat07@Telegram",
         "sg|3afb|puddincat07@Telegram",
+        "us|c285|puddincat07@Telegram",
+        "us|8fee|puddincat07@Telegram",
+        "xx|c671|puddincat07@Telegram",
         "xx|966a|puddincat07@Telegram",
+        "xx|4994|puddincat07@Telegram",
         "us|7a73|puddincat07@Telegram",
-        "us|81c2|puddincat07@Telegram",
         "us|88ad|puddincat07@Telegram",
-        "xx|11ec|puddincat07@Telegram",
-        "ch|396b|puddincat07@Telegram",
-        "xx|ec20|puddincat07@Telegram",
-        "us|8fee|puddincat07@Telegram"
+        "us|81c2|puddincat07@Telegram",
+        "xx|e7ef|puddincat07@Telegram",
+        "au|c385|puddincat07@Telegram"
       ]
     },
     {
       "type": "urltest",
       "tag": "♻️ 自动",
       "outbounds": [
-        "jp|707c|puddincat07@Telegram",
         "xx|febb|puddincat07@Telegram",
+        "jp|707c|puddincat07@Telegram",
         "kr|1325|puddincat07@Telegram",
         "xx|344a|puddincat07@Telegram",
         "sg|0ed4|puddincat07@Telegram",
-        "xx|c671|puddincat07@Telegram",
-        "us|c285|puddincat07@Telegram",
         "sg|3afb|puddincat07@Telegram",
+        "us|c285|puddincat07@Telegram",
+        "us|8fee|puddincat07@Telegram",
+        "xx|c671|puddincat07@Telegram",
         "xx|966a|puddincat07@Telegram",
+        "xx|4994|puddincat07@Telegram",
         "us|7a73|puddincat07@Telegram",
-        "us|81c2|puddincat07@Telegram",
         "us|88ad|puddincat07@Telegram",
-        "xx|11ec|puddincat07@Telegram",
-        "ch|396b|puddincat07@Telegram",
-        "xx|ec20|puddincat07@Telegram",
-        "us|8fee|puddincat07@Telegram"
+        "us|81c2|puddincat07@Telegram",
+        "xx|e7ef|puddincat07@Telegram",
+        "au|c385|puddincat07@Telegram"
       ],
       "interval": "5m",
       "tolerance": 50
@@ -123,10 +123,10 @@
       "outbounds": [
         "🇺🇸 美国 - 自动",
         "us|c285|puddincat07@Telegram",
+        "us|8fee|puddincat07@Telegram",
         "us|7a73|puddincat07@Telegram",
-        "us|81c2|puddincat07@Telegram",
         "us|88ad|puddincat07@Telegram",
-        "us|8fee|puddincat07@Telegram"
+        "us|81c2|puddincat07@Telegram"
       ]
     },
     {
@@ -134,10 +134,10 @@
       "tag": "🇺🇸 美国 - 自动",
       "outbounds": [
         "us|c285|puddincat07@Telegram",
+        "us|8fee|puddincat07@Telegram",
         "us|7a73|puddincat07@Telegram",
-        "us|81c2|puddincat07@Telegram",
         "us|88ad|puddincat07@Telegram",
-        "us|8fee|puddincat07@Telegram"
+        "us|81c2|puddincat07@Telegram"
       ],
       "interval": "5m"
     },
@@ -257,13 +257,16 @@
       "type": "selector",
       "tag": "🇦🇺 澳大利亚",
       "outbounds": [
-        "🇦🇺 澳大利亚 - 自动"
+        "🇦🇺 澳大利亚 - 自动",
+        "au|c385|puddincat07@Telegram"
       ]
     },
     {
       "type": "urltest",
       "tag": "🇦🇺 澳大利亚 - 自动",
-      "outbounds": [],
+      "outbounds": [
+        "au|c385|puddincat07@Telegram"
+      ],
       "interval": "5m"
     },
     {
@@ -385,20 +388,20 @@
     },
     {
       "type": "hysteria2",
-      "tag": "jp|707c|puddincat07@Telegram",
-      "server": "8.211.175.236",
-      "server_port": 8443,
-      "password": "u63SxILNwtrQZ7Y1ZrFaZfsA",
+      "tag": "xx|febb|puddincat07@Telegram",
+      "server": "vp3.yysyy.online",
+      "server_port": 443,
+      "password": "96ab5cd282733fd4c312a61f972f330a",
       "tls": {
         "enabled": true
       }
     },
     {
       "type": "hysteria2",
-      "tag": "xx|febb|puddincat07@Telegram",
-      "server": "vp3.yysyy.online",
-      "server_port": 443,
-      "password": "96ab5cd282733fd4c312a61f972f330a",
+      "tag": "jp|707c|puddincat07@Telegram",
+      "server": "8.211.175.236",
+      "server_port": 8443,
+      "password": "u63SxILNwtrQZ7Y1ZrFaZfsA",
       "tls": {
         "enabled": true
       }
@@ -435,10 +438,14 @@
     },
     {
       "type": "hysteria2",
-      "tag": "xx|c671|puddincat07@Telegram",
-      "server": "142.249.37.90",
-      "server_port": 44356,
-      "password": "dongtaiwang.com",
+      "tag": "sg|3afb|puddincat07@Telegram",
+      "server": "138.2.89.249",
+      "server_port": 443,
+      "password": "d042d150716709bb778cc73889cddb02",
+      "obfs": {
+        "type": "salamander",
+        "password": "309502c4a8df10b46fb976d4a8c43f42"
+      },
       "tls": {
         "enabled": true
       }
@@ -459,14 +466,20 @@
     },
     {
       "type": "hysteria2",
-      "tag": "sg|3afb|puddincat07@Telegram",
-      "server": "138.2.89.249",
-      "server_port": 443,
-      "password": "d042d150716709bb778cc73889cddb02",
-      "obfs": {
-        "type": "salamander",
-        "password": "309502c4a8df10b46fb976d4a8c43f42"
-      },
+      "tag": "us|8fee|puddincat07@Telegram",
+      "server": "163.192.14.135",
+      "server_port": 50160,
+      "password": "099830134df5ac3a04a4b21d39b8c395",
+      "tls": {
+        "enabled": true
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "xx|c671|puddincat07@Telegram",
+      "server": "142.249.37.90",
+      "server_port": 44356,
+      "password": "dongtaiwang.com",
       "tls": {
         "enabled": true
       }
@@ -483,20 +496,20 @@
     },
     {
       "type": "hysteria2",
-      "tag": "us|7a73|puddincat07@Telegram",
-      "server": "66.94.121.46",
-      "server_port": 443,
-      "password": "gf1:gfhysteria2024",
+      "tag": "xx|4994|puddincat07@Telegram",
+      "server": "hy2.123266.xyz",
+      "server_port": 33333,
+      "password": "bce6c821-200d-421f-bf3d-7159e5246ea0",
       "tls": {
         "enabled": true
       }
     },
     {
       "type": "hysteria2",
-      "tag": "us|81c2|puddincat07@Telegram",
-      "server": "129.213.91.185",
-      "server_port": 35013,
-      "password": "4291c983-c520-46ac-82cc-48f14bef573f",
+      "tag": "us|7a73|puddincat07@Telegram",
+      "server": "66.94.121.46",
+      "server_port": 443,
+      "password": "gf1:gfhysteria2024",
       "tls": {
         "enabled": true
       }
@@ -517,23 +530,23 @@
     },
     {
       "type": "hysteria2",
-      "tag": "xx|11ec|puddincat07@Telegram",
-      "server": "nl-hy-test.tcp-reset-club.net",
-      "server_port": 443,
-      "password": "529f1911-04d5-4427-94b9-c851fd459a27",
+      "tag": "us|81c2|puddincat07@Telegram",
+      "server": "129.213.91.185",
+      "server_port": 35013,
+      "password": "4291c983-c520-46ac-82cc-48f14bef573f",
       "tls": {
         "enabled": true
       }
     },
     {
       "type": "hysteria2",
-      "tag": "ch|396b|puddincat07@Telegram",
-      "server": "152.67.75.161",
-      "server_port": 443,
-      "password": "3a702d4d1de4949005d8431220e040fb",
+      "tag": "xx|e7ef|puddincat07@Telegram",
+      "server": "nas.aizhzo.com",
+      "server_port": 5010,
+      "password": "eBTe6Ax2pUts8oMEWoYVDfnSlHfkLffQ",
       "obfs": {
         "type": "salamander",
-        "password": "c13f29db6a638ad2b211b9ce2669ef27"
+        "password": "7M4RXPFcQyQEGbkxBPfXo4bilMhCW2U9"
       },
       "tls": {
         "enabled": true
@@ -541,20 +554,14 @@
     },
     {
       "type": "hysteria2",
-      "tag": "xx|ec20|puddincat07@Telegram",
-      "server": "nl1server.rabstvo.shop",
+      "tag": "au|c385|puddincat07@Telegram",
+      "server": "152.67.115.203",
       "server_port": 443,
-      "password": "9yOIR2_QAChKs26rYaiX_aoNnOALd0aU",
-      "tls": {
-        "enabled": true
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "us|8fee|puddincat07@Telegram",
-      "server": "163.192.14.135",
-      "server_port": 50160,
-      "password": "099830134df5ac3a04a4b21d39b8c395",
+      "password": "633bc3be486b646190661ac2387c150a",
+      "obfs": {
+        "type": "salamander",
+        "password": "850a3fb1cd33a28f12d837578ae1a2e7"
+      },
       "tls": {
         "enabled": true
       }
