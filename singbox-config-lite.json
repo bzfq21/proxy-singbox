@@ -323,6 +323,19 @@
     },
     {
       "type": "selector",
+      "tag": "🇲🇽 墨西哥",
+      "outbounds": [
+        "🇲🇽 墨西哥 - 自动"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "🇲🇽 墨西哥 - 自动",
+      "outbounds": [],
+      "interval": "5m"
+    },
+    {
+      "type": "selector",
       "tag": "🇵🇭 菲律宾",
       "outbounds": [
         "🇵🇭 菲律宾 - 自动"
