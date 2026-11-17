@@ -296,19 +296,6 @@
     },
     {
       "type": "selector",
-      "tag": "🇦🇷 阿根廷",
-      "outbounds": [
-        "🇦🇷 阿根廷 - 自动"
-      ]
-    },
-    {
-      "type": "urltest",
-      "tag": "🇦🇷 阿根廷 - 自动",
-      "outbounds": [],
-      "interval": "5m"
-    },
-    {
-      "type": "selector",
       "tag": "🇧🇷 巴西",
       "outbounds": [
         "🇧🇷 巴西 - 自动"
@@ -330,6 +317,19 @@
     {
       "type": "urltest",
       "tag": "🇹🇭 泰国 - 自动",
+      "outbounds": [],
+      "interval": "5m"
+    },
+    {
+      "type": "selector",
+      "tag": "🇻🇳 越南",
+      "outbounds": [
+        "🇻🇳 越南 - 自动"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "🇻🇳 越南 - 自动",
       "outbounds": [],
       "interval": "5m"
     },
