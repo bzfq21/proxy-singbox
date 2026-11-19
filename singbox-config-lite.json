@@ -132,6 +132,19 @@
     },
     {
       "type": "selector",
+      "tag": "🇹🇼 台湾",
+      "outbounds": [
+        "🇹🇼 台湾 - 自动"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "🇹🇼 台湾 - 自动",
+      "outbounds": [],
+      "interval": "5m"
+    },
+    {
+      "type": "selector",
       "tag": "🇰🇷 韩国",
       "outbounds": [
         "🇰🇷 韩国 - 自动"
@@ -231,6 +244,19 @@
     },
     {
       "type": "selector",
+      "tag": "🇦🇺 澳大利亚",
+      "outbounds": [
+        "🇦🇺 澳大利亚 - 自动"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "🇦🇺 澳大利亚 - 自动",
+      "outbounds": [],
+      "interval": "5m"
+    },
+    {
+      "type": "selector",
       "tag": "🇨🇦 加拿大",
       "outbounds": [
         "🇨🇦 加拿大 - 自动"
@@ -278,6 +304,19 @@
     {
       "type": "urltest",
       "tag": "🇧🇷 巴西 - 自动",
+      "outbounds": [],
+      "interval": "5m"
+    },
+    {
+      "type": "selector",
+      "tag": "🇲🇽 墨西哥",
+      "outbounds": [
+        "🇲🇽 墨西哥 - 自动"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "🇲🇽 墨西哥 - 自动",
       "outbounds": [],
       "interval": "5m"
     },
