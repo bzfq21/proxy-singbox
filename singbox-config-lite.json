@@ -270,19 +270,6 @@
     },
     {
       "type": "selector",
-      "tag": "🇮🇳 印度",
-      "outbounds": [
-        "🇮🇳 印度 - 自动"
-      ]
-    },
-    {
-      "type": "urltest",
-      "tag": "🇮🇳 印度 - 自动",
-      "outbounds": [],
-      "interval": "5m"
-    },
-    {
-      "type": "selector",
       "tag": "🇹🇷 土耳其",
       "outbounds": [
         "🇹🇷 土耳其 - 自动"
@@ -296,19 +283,6 @@
     },
     {
       "type": "selector",
-      "tag": "🇦🇷 阿根廷",
-      "outbounds": [
-        "🇦🇷 阿根廷 - 自动"
-      ]
-    },
-    {
-      "type": "urltest",
-      "tag": "🇦🇷 阿根廷 - 自动",
-      "outbounds": [],
-      "interval": "5m"
-    },
-    {
-      "type": "selector",
       "tag": "🇧🇷 巴西",
       "outbounds": [
         "🇧🇷 巴西 - 自动"
@@ -317,19 +291,6 @@
     {
       "type": "urltest",
       "tag": "🇧🇷 巴西 - 自动",
-      "outbounds": [],
-      "interval": "5m"
-    },
-    {
-      "type": "selector",
-      "tag": "🇮🇩 印度尼西亚",
-      "outbounds": [
-        "🇮🇩 印度尼西亚 - 自动"
-      ]
-    },
-    {
-      "type": "urltest",
-      "tag": "🇮🇩 印度尼西亚 - 自动",
       "outbounds": [],
       "interval": "5m"
     },
