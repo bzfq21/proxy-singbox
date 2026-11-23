@@ -270,19 +270,6 @@
     },
     {
       "type": "selector",
-      "tag": "🇮🇳 印度",
-      "outbounds": [
-        "🇮🇳 印度 - 自动"
-      ]
-    },
-    {
-      "type": "urltest",
-      "tag": "🇮🇳 印度 - 自动",
-      "outbounds": [],
-      "interval": "5m"
-    },
-    {
-      "type": "selector",
       "tag": "🇮🇩 印度尼西亚",
       "outbounds": [
         "🇮🇩 印度尼西亚 - 自动"
@@ -291,6 +278,19 @@
     {
       "type": "urltest",
       "tag": "🇮🇩 印度尼西亚 - 自动",
+      "outbounds": [],
+      "interval": "5m"
+    },
+    {
+      "type": "selector",
+      "tag": "🇻🇳 越南",
+      "outbounds": [
+        "🇻🇳 越南 - 自动"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "🇻🇳 越南 - 自动",
       "outbounds": [],
       "interval": "5m"
     },
